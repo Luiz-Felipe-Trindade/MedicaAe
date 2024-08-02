@@ -1,11 +1,12 @@
 // Styles
 import "./App.css";
+import TelaInicial from "./components/HomeScreen";
 import "./index.css";
 
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <TelaInicial />
     </>
   );
 }
