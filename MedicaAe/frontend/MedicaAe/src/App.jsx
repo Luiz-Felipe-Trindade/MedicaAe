@@ -5,6 +5,9 @@ import "./App.css";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import HomePage from "./pages/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import FaqPage from "./pages/FaqPage/FaqPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -29,6 +32,15 @@ function App() {
           </Route>
           <Route path={"/"} element={<HomePage />}>
             Inicio
+          </Route>
+          <Route path={"/about"} element={<AboutPage />}>
+            Sobre
+          </Route>
+          <Route path={"/contact"} element={<ContactPage />}>
+            Contato
+          </Route>
+          <Route path={"/faq"} element={<FaqPage />}>
+            FAQ
           </Route>
         </Routes>
       </BrowserRouter>

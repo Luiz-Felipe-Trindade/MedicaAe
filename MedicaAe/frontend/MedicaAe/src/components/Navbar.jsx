@@ -5,10 +5,22 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to={"/login"}>Entrar</NavLink>
-      <NavLink to={"/register"}>Cadastrar</NavLink>
-      <NavLink to={"/"}>MedicAê</NavLink>
+    <nav className={styles.navbar}>
+      <div>
+        <NavLink to={"/login"}>Login</NavLink>
+        <NavLink to={"/register"} className={styles.register_btn}>
+          Registrar
+        </NavLink>
+      </div>
+      <div>
+        <NavLink to={"/"}>Inicio</NavLink>
+        <NavLink to={"/about"}>Sobre</NavLink>
+        <NavLink to={"/faq"}>FAQ</NavLink>
+        <NavLink to={"/contact"}>Contato</NavLink>
+      </div>
+      <div className={styles.logo}>
+        <NavLink to={"/"}>MedicAê</NavLink>
+      </div>
     </nav>
   );
 };

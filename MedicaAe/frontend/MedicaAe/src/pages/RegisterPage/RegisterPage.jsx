@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
-
 const RegisterPage = () => {
   const handleSubmit = (e) => {
-    const [displayName, setDisplayName] = useState("");
-    const [displayLastName, setDisplayLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [confirmEmail, setConfirmEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-
     e.preventDefault();
   };
+  const [displayName, setDisplayName] = useState("");
+  const [displayLastName, setDisplayLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [confirmEmail, setConfirmEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -21,6 +19,10 @@ const RegisterPage = () => {
             name="displayName"
             required
             placeholder="Insira seu nome"
+            value={displayName}
+            onChange={(e) => {
+              setDisplayName(e.target.value);
+            }}
           />
         </label>
         <label>
@@ -30,6 +32,10 @@ const RegisterPage = () => {
             name="displayLastName"
             required
             placeholder="Insira seu sobrenome"
+            value={displayLastName}
+            onChange={(e) => {
+              setDisplayLastName(e.target.value);
+            }}
           />
         </label>
         <label>
@@ -39,6 +45,10 @@ const RegisterPage = () => {
             name="password"
             required
             placeholder="Insira sua senha"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
         </label>
         <label>
@@ -48,6 +58,10 @@ const RegisterPage = () => {
             name="password"
             required
             placeholder="Confirme sua senha"
+            value={confirmPassword}
+            onChange={(e) => {
+              setConfirmPassword(e.target.value);
+            }}
           />
         </label>
         <label>
@@ -57,6 +71,10 @@ const RegisterPage = () => {
             name="email"
             required
             placeholder="Insira seu email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
         </label>
         <label>
@@ -66,6 +84,10 @@ const RegisterPage = () => {
             name="email"
             required
             placeholder="Confirme seu email"
+            value={confirmEmail}
+            onChange={(e) => {
+              setConfirmEmail(e.target.value);
+            }}
           />
         </label>
         <button>Cadastrar</button>
