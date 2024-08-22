@@ -1,0 +1,41 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url(backgroundImage1.svg);
+
+
+    height: 100%;
+    background-repeat: no-repeat no-repeat;
+}
+
+.tittle {
+    font-weight: bold;
+    font-size: 2.5rem;
+    
+}
+.text {
+    font-size: x-large;
+    justify-content: center;
+    margin: 5%  30%;
+    text-align: center;
+    
+}
+.register_btn {
+    
+    
+}
+.btn{
+    border: 1px solid #135359;
+    border-radius: 0.5em;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    width: 9rem;
+    height: 2rem;
+    margin: 1rem;
+    color: #135359;
+}
+
+
+

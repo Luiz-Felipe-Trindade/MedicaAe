@@ -1,5 +1,15 @@
+#root, html { 
+  height: 100dvh;
+  width: 100dvw;
+}
+
 body {
   padding: 0px;
   margin: 0px;
   background-color: #FFFBF7;
+  font-family: "Baloo 2";
+  color: #135359;
+
+  height: 100%;
+  width: 100%;
 }

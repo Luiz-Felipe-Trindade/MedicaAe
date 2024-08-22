@@ -13,13 +13,14 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
-import Navbar from "./components/Navbar";
+import HomeNavbar from "./components/HomeNavbar";
+import HomeFooter from "./components/HomeFooter";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <HomeNavbar />
         <Routes>
           <Route path={"/register"} element={<RegisterPage />}>
             Registrar
