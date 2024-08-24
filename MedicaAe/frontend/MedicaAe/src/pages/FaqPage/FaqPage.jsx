@@ -1,7 +1,11 @@
+import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
 import styles from "./FaqPage.module.css";
 
-const FaqPage = () => {
-  return <div>FaqPage</div>;
+export const FaqPage = () => {
+  return (
+    <>
+      <TinyHomeNavbar />
+      <div>FaqPage</div>
+    </>
+  );
 };
-
-export default FaqPage;

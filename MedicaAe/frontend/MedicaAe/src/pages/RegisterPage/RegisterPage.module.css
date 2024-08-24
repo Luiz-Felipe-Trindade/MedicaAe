@@ -1,0 +1,14 @@
+.register_box {
+  width: 30rem;
+
+  padding: 10rem 24rem;
+}
+.already_link {
+  color: #135359;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0rem 11rem;
+}
+.already_link:hover {
+  text-decoration: underline;
+}

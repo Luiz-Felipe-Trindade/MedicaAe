@@ -1,6 +1,10 @@
+import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
 import styles from "./AboutPage.module.css";
-const AboutPage = () => {
-  return <div>AboutPage</div>;
+export const AboutPage = () => {
+  return (
+    <>
+      <TinyHomeNavbar />
+      <div>AboutPage</div>
+    </>
+  );
 };
-
-export default AboutPage;

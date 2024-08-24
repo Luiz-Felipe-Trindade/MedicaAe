@@ -1,0 +1,21 @@
+.base_button {
+  color: #fffbf7;
+  font-weight: bolder;
+  font-size: large;
+  padding: 1rem 12.2rem;
+  border-radius: 0.7rem;
+  margin: 1rem 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #09262983;
+  border: 1px solid #135359;
+  background-color: #135359;
+  cursor: pointer;
+}
+
+.small_input {
+  display: flex;
+  flex-direction: row;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}

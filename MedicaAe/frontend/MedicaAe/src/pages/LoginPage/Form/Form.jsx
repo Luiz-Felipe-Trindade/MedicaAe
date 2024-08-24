@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
-import { Input } from "../../../../components/Inputs/Input";
+import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
 import styles from "./Form.module.css";
 
 export const Form = () => {

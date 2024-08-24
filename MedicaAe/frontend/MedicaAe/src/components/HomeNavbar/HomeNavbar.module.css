@@ -1,0 +1,27 @@
+.navbar {
+  background-color: transparent;
+  padding: 1.5rem 0rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Baloo 2";
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: #135359;
+  text-decoration: none;
+  padding: 0.8rem;
+  margin: 0rem 1rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.register_btn {
+  border: 1px solid #135359;
+  border-radius: 0.5em;
+}

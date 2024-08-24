@@ -1,5 +1,22 @@
-const LoginPage = () => {
-  return <div>LoginPage</div>;
+import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
+import { Form } from "./Form/Form";
+import styles from "./LoginPage.module.css";
+export const LoginPage = () => {
+  return (
+    <>
+      <TinyHomeNavbar />
+      <div className="container">
+        <div className={styles.login}>
+          <Form />
+        </div>
+        <div className="subfooter">
+          <div className="info">
+            <div className="email"></div>
+            <div className="contato"></div>
+          </div>
+          <div className="text"></div>
+        </div>
+      </div>
+    </>
+  );
 };
-
-export default LoginPage;

@@ -7,7 +7,7 @@ export const InputWithLabel = ({ label, placeholder, ...rest }) => {
   return (
     <div className={styles.input_box}>
       <Label>{label}</Label>
-      <Input placeholder={`Insira seu ${placeholder ?? label}`} {...rest} />
+      <Input placeholder={`${placeholder ?? label}`} {...rest} />
     </div>
   );
 };
