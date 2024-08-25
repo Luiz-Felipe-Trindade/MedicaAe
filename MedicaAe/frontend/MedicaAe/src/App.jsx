@@ -2,7 +2,8 @@
 import "./App.css";
 
 // Pages
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
+//import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import RegisterPage from "./pages/RegisterPage/teste";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";

@@ -1,23 +1,42 @@
-import React, { useState, useEffect } from "react";
-import config from "./configuration";
+import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { getDatabase, ref, onValue } from "firebase/database";
-
-
-function Banco(){
-  const [data, setData] = useState([]);
-  const database = getDatabase(config);
-  const collectionRef = ref(database, "medicae");
-
-}
-
+import config from "./configuration";
 
 const RegisterPage = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();  
-  };
+  const [displayName, setDisplayName] = useState("");
+  const [displayLastName, setDisplayLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [confirmEmail, setConfirmEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Envia os dados para a coleção 'medicae' no Firebase Firestore
+      await addDoc(collection(config, "medicae"), {
+        displayName: displayName,
+        displayLastName: displayLastName,
+        email: email,
+        password: password,
+        confirmEmail: confirmEmail,
+        confirmPassword: confirmPassword,
+      });
+      alert("Informações enviadas com sucesso");
+
+      // Limpa os campos do formulário
+      setDisplayName("");
+      setDisplayLastName("");
+      setEmail("");
+      setConfirmEmail("");
+      setPassword("");
+      setConfirmPassword("");
+    } catch (e) {
+      console.error("Erro ao enviar informações: ", e);
+      alert("Erro ao enviar informações. Tente novamente.");
+    }
+  };
 
   return (
     <div>
@@ -30,9 +49,7 @@ const RegisterPage = () => {
             required
             placeholder="Insira seu nome"
             value={displayName}
-            onChange={(e) => {
-              setDisplayName(e.target.value);
-            }}
+            onChange={(e) => setDisplayName(e.target.value)}
           />
         </label>
         <label>
@@ -43,9 +60,7 @@ const RegisterPage = () => {
             required
             placeholder="Insira seu sobrenome"
             value={displayLastName}
-            onChange={(e) => {
-              setDisplayLastName(e.target.value);
-            }}
+            onChange={(e) => setDisplayLastName(e.target.value)}
           />
         </label>
         <label>
@@ -56,22 +71,18 @@ const RegisterPage = () => {
             required
             placeholder="Insira sua senha"
             value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <label>
           <span>Confirmação de senha</span>
           <input
             type="password"
-            name="password"
+            name="confirmPassword"
             required
             placeholder="Confirme sua senha"
             value={confirmPassword}
-            onChange={(e) => {
-              setConfirmPassword(e.target.value);
-            }}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </label>
         <label>
@@ -82,22 +93,18 @@ const RegisterPage = () => {
             required
             placeholder="Insira seu email"
             value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <label>
           <span>Confirmação de email</span>
           <input
             type="email"
-            name="email"
+            name="confirmEmail"
             required
             placeholder="Confirme seu email"
             value={confirmEmail}
-            onChange={(e) => {
-              setConfirmEmail(e.target.value);
-            }}
+            onChange={(e) => setConfirmEmail(e.target.value)}
           />
         </label>
         <button type="submit">Cadastrar</button>

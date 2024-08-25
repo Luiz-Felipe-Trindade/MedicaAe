@@ -1,0 +1,4 @@
+Existem duas páginas na pasta RegisterPage que incluem os formulários:
+RegisterPage.jsx é a página original, sem as configuraçãoes do firebase ou importações do banco;
+Teste.jsx é a página de teste para testar a conexão do banco, que é onde modifiquei mais e fiz gambiarra mesmo, mudei o redirecionamento no index para o arquivo de teste <-
+"configuration.jsx" é o arquivo contendo a configuração e importação do firebase então ele deverá sempre ser importado para o formulário

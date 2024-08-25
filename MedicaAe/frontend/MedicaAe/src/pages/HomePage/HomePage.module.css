@@ -1,37 +1,37 @@
-.content {
+
+ .content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique sobre a imagem */
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    /* background-image: url(backgroundImage1.svg); */
-
     height: 60%;
     padding: 0.4rem 7rem;
-    background-repeat: no-repeat no-repeat;
-}
-
-.tittle {
+    color: #135359; /* Altere para branco ou outra cor que contraste com a imagem */
+  }
+  
+  .tittle {
     font-weight: bold;
     font-size: 2.5rem;
-    
-}
-.text {
+  }
+  
+  .text {
     font-size: x-large;
     justify-content: center;
     margin: 5%  30%;
     text-align: center;
-    
-}
-.register_btn:hover{
+  }
+  
+  .register_btn:hover{
     box-shadow: 0.1rem 0.1rem 1rem #09262983;
-
-}
-.btn:hover {
+  }
+  
+  .btn:hover {
     box-shadow: 0.1rem 0.1rem 1rem #09262983;
-
-}
-
-.register_btn {
+  }
+  
+  .register_btn {
     color: #FFFBF7; 
     background-color: #135359;
     border-radius: 0.5em;
@@ -40,9 +40,9 @@
     width: 9rem;
     height: 2rem;
     margin: 1rem;
-    
-}
-.btn{
+  }
+  
+  .btn {
     border: 1px solid #135359;
     border-radius: 0.5em;
     text-decoration: none;
@@ -51,7 +51,5 @@
     height: 2rem;
     margin: 1rem;
     color: #135359;
-}
-
-
-
+  }
+  
