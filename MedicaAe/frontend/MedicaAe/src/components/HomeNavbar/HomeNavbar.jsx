@@ -17,6 +17,7 @@ export const HomeNavbar = () => {
         <NavLink to={"/about"}>Sobre</NavLink>
         <NavLink to={"/faq"}>FAQ</NavLink>
         <NavLink to={"/contact"}>Contato</NavLink>
+        <NavLink to={"/pt/dashboard"}>Main</NavLink>
       </div>
       <div className={styles.logo}>
         <a>MedicAê</a>

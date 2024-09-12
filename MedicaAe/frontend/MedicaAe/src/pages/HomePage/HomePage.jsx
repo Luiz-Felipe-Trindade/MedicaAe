@@ -14,7 +14,7 @@ export const HomePage = () => {
         </p>
         <div>
           <NavLink to="/register" className={styles.register_btn}>
-            Começar a fezer uma conta agora
+            Começar a fazer uma conta agora
           </NavLink>
           <NavLink to="/about" className={styles.btn}>
             Conheça um pouco sobre nós

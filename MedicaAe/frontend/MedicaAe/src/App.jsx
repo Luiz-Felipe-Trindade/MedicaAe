@@ -11,37 +11,44 @@ import { ContactPage } from "./pages/ContactPage/ContactPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MainPage } from "./pages/SystemPages/MainPage/MainPage";
 
 // Components
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path={"/register"} element={<RegisterPage />}>
-            Registrar
-          </Route>
-          <Route path={"/login"} element={<LoginPage />}>
-            Entrar
-          </Route>
-          <Route path={"/"} element={<HomePage />}>
-            MedicAê
-          </Route>
-          <Route path={"/"} element={<HomePage />}>
-            Inicio
-          </Route>
-          <Route path={"/about"} element={<AboutPage />}>
-            Sobre
-          </Route>
-          <Route path={"/contact"} element={<ContactPage />}>
-            Contato
-          </Route>
-          <Route path={"/faq"} element={<FaqPage />}>
-            FAQ
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <div className="page">
+        <BrowserRouter>
+          <Routes>
+            <Route path={"/register"} element={<RegisterPage />}>
+              Registrar
+            </Route>
+            <Route path={"/login"} element={<LoginPage />}>
+              Entrar
+            </Route>
+            <Route path={"/"} element={<HomePage />}>
+              MedicAê
+            </Route>
+            <Route path={"/"} element={<HomePage />}>
+              Inicio
+            </Route>
+            <Route path={"/about"} element={<AboutPage />}>
+              Sobre
+            </Route>
+            <Route path={"/contact"} element={<ContactPage />}>
+              Contato
+            </Route>
+            <Route path={"/faq"} element={<FaqPage />}>
+              FAQ
+            </Route>
+            <Route path={"/pt/dashboard"} element={<MainPage />}>
+              Main
+            </Route>
+            <Route path={"/pt/dashboard"} element={<MainPage />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }

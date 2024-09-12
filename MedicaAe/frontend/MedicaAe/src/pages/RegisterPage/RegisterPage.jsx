@@ -3,11 +3,12 @@ import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
 import { Form } from "./Form/Form";
 import styles from "./RegisterPage.module.css";
 import { NavLink } from "react-router-dom";
+import { FooterBar } from "../../components/FooterBar/FooterBar";
 export const RegisterPage = () => {
   return (
     <>
       <TinyHomeNavbar />
-      <div className="container">
+      <div className={styles.container}>
         <div className={styles.register_box}>
           <Form />
           <NavLink to="/login" className={styles.already_link}>
@@ -15,11 +16,7 @@ export const RegisterPage = () => {
           </NavLink>
         </div>
         <div className="subfooter">
-          <div className="info">
-            <div className="email"></div>
-            <div className="contato"></div>
-          </div>
-          <div className="text"></div>
+          <FooterBar />
         </div>
       </div>
     </>

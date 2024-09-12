@@ -12,3 +12,6 @@
   font-weight: bolder;
   font-size: large;
 }
+.base_button:active {
+  background-color: #0d393d;
+}

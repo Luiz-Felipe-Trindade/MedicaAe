@@ -3,3 +3,16 @@
 
   padding: 10rem 25rem;
 }
+
+.create_account {
+  color: #135359;
+  text-decoration: none;
+  padding: 0.1rem 2.5rem;
+}
+
+.create_account:hover {
+  text-decoration: underline;
+}
+.footer {
+  margin: 9.86rem 0rem;
+}
