@@ -3,11 +3,14 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  /* background-image: url(backgroundImage1.svg); */
 
   height: 60%;
   padding: 0.4rem 7rem;
   background-repeat: no-repeat no-repeat;
+}
+.page {
+  background-image: url(image.png);
+  background-position: 10rem 2rem;
 }
 
 .tittle {

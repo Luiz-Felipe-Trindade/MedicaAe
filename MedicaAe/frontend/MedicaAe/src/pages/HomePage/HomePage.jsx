@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom";
 import styles from "./HomePage.module.css";
 import { HomeNavbar } from "../../components/HomeNavbar/HomeNavbar";
+import { useAuth } from "../../context/AuthProvider";
+
 export const HomePage = () => {
+  const { isAuthenticated, login, logout } = useAuth();
+
   return (
     <>
       <HomeNavbar />

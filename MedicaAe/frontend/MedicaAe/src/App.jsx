@@ -1,6 +1,10 @@
 // Styles
 import "./App.css";
 
+// Context API's
+
+import { AuthProvider, useAuth } from "./context/AuthProvider";
+
 // Pages
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
@@ -13,12 +17,16 @@ import { ContactPage } from "./pages/ContactPage/ContactPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainPage } from "./pages/SystemPages/MainPage/MainPage";
 
+import { useEffect } from "react";
 // Components
 
 function App() {
+  const rootElement = document.getElementById("root");
+  rootElement.classList.add("unlogged");
+
   return (
     <>
-      <div className="page">
+      <AuthProvider>
         <BrowserRouter>
           <Routes>
             <Route path={"/register"} element={<RegisterPage />}>
@@ -42,13 +50,12 @@ function App() {
             <Route path={"/faq"} element={<FaqPage />}>
               FAQ
             </Route>
-            <Route path={"/pt/dashboard"} element={<MainPage />}>
+            <Route path={"/dashboard"} element={<MainPage />}>
               Main
             </Route>
-            <Route path={"/pt/dashboard"} element={<MainPage />}></Route>
           </Routes>
         </BrowserRouter>
-      </div>
+      </AuthProvider>
     </>
   );
 }
