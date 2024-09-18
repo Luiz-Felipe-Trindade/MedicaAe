@@ -1,3 +1,16 @@
+.container {
+  background-image: url(/src/assets/image.png);
+  background-position: 0rem 25rem;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.subcontainer {
+  background-image: url(./image.png);
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-position: 70rem 3rem;
+}
 .login {
   width: 18.8rem;
 
@@ -14,5 +27,9 @@
   text-decoration: underline;
 }
 .footer {
-  margin: 9.86rem 0rem;
+  margin: 1.86rem 0rem;
+}
+.icons {
+  margin-top: 5.5rem;
+  margin-left: 2%;
 }

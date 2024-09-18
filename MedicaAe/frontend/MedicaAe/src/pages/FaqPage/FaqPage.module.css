@@ -1,0 +1,7 @@
+.container {
+  background-image: url(/src/assets/Faq.png);
+  background-repeat: no-repeat;
+  background-size: 120rem 30rem;
+  height: 100%;
+  width: 100%;
+}

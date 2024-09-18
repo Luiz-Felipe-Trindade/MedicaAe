@@ -10,7 +10,7 @@ export const TinyHomeNavbar = () => {
         <NavLink to={"/"}>Inicio</NavLink>
         <NavLink to={"/about"}>Sobre</NavLink>
         <NavLink to={"/faq"}>FAQ</NavLink>
-        <NavLink to={"/contact"}>Contato</NavLink>
+        {/* <NavLink to={"/contact"}>Contato</NavLink> */}
       </div>
       <div className={styles.logo}>
         <a>MedicAê</a>

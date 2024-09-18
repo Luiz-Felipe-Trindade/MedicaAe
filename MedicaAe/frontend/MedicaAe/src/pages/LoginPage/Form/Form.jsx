@@ -10,19 +10,6 @@ export const Form = () => {
   const { isAuthenticated, login, logout } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const rootElement = document.getElementById("root");
-    if (rootElement) {
-      if (!isAuthenticated) {
-        console.log(isAuthenticated, "add");
-        rootElement.classList.add("unlogged");
-      } else {
-        console.log(isAuthenticated, "remove");
-
-        rootElement.classList.remove("unlogged");
-      }
-    }
-  }, [isAuthenticated]);
   const handleSubmit = (e) => {
     login();
     navigate("/dashboard");
