@@ -19,6 +19,7 @@ export const Form = () => {
           <div className={styles.small_input}>
             <InputWithLabel
               label="Nome Completo"
+              placeholder={"Jorge Vagner"}
               type="text"
               name="displayName"
               required
@@ -85,9 +86,7 @@ export const Form = () => {
             setConfirmEmail(e.target.value);
           }}
         />
-        <button onClick={handleSubmit} className={styles.base_button}>
-          Cadastrar
-        </button>
+        <button className={styles.base_button}>Cadastrar</button>
       </form>
     </div>
   );

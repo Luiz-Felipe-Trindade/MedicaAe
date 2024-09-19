@@ -1,7 +1,20 @@
+.container {
+  background-image: url(/src/assets/image.png);
+  background-position: 0rem 25rem;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
 .register_box {
   width: 30rem;
 
-  padding: 10rem 24rem;
+  padding: 6rem 20rem;
+}
+.subcontainer {
+  background-image: url(./image.png);
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-position: 70rem 15rem;
 }
 .already_link {
   color: #135359;
@@ -11,4 +24,12 @@
 }
 .already_link:hover {
   text-decoration: underline;
+}
+.footer {
+  margin: 0;
+  padding: 0;
+}
+.icons {
+  margin-top: 5.5rem;
+  margin-left: 2%;
 }

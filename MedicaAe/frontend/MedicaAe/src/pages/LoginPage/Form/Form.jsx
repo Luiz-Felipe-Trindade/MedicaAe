@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
 import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
 import styles from "./Form.module.css";
+import { useAuth } from "../../../context/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 export const Form = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { isAuthenticated, login, logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
+    login();
+    navigate("/dashboard");
     e.preventDefault();
   };
   return (

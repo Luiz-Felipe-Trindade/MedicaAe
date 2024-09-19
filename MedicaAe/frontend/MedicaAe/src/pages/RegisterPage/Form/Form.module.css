@@ -10,6 +10,9 @@
   background-color: #135359;
   cursor: pointer;
 }
+.base_button:active {
+  background-color: #0d393d;
+}
 
 .small_input {
   display: flex;

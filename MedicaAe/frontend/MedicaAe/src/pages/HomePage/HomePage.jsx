@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
 import styles from "./HomePage.module.css";
 import { HomeNavbar } from "../../components/HomeNavbar/HomeNavbar";
+import { useAuth } from "../../context/AuthProvider";
+import { FooterBar } from "../../components/FooterBar/FooterBar";
+import { IconsBar } from "../../components/IconsBar/IconsBar";
+
 export const HomePage = () => {
+  const { isAuthenticated, login, logout } = useAuth();
+
   return (
-    <>
+    <div className={styles.container}>
       <HomeNavbar />
       <div className={styles.content}>
         <h1>MedicAê</h1>
@@ -14,13 +20,16 @@ export const HomePage = () => {
         </p>
         <div>
           <NavLink to="/register" className={styles.register_btn}>
-            Começar a fezer uma conta agora
+            Começar a fazer uma conta agora
           </NavLink>
           <NavLink to="/about" className={styles.btn}>
             Conheça um pouco sobre nós
           </NavLink>
         </div>
       </div>
-    </>
+      <div className={styles.icons}>
+        <IconsBar />
+      </div>
+    </div>
   );
 };
