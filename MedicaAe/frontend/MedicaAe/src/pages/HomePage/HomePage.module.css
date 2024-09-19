@@ -19,11 +19,12 @@
 .tittle {
   font-weight: bold;
   font-size: 2.5rem;
+  margin: 0;
 }
 .text {
   font-size: x-large;
   justify-content: center;
-  margin: 5% 30%;
+  margin: 3% 25%;
   text-align: center;
 }
 .register_btn:hover {
