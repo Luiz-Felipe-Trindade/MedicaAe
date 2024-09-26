@@ -1,0 +1,115 @@
+.page-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.pacientes-container {
+    padding: 20px;
+    width: 800px; /* Define a largura da div */
+    height: 500px; /* Define a altura da div */
+    background-color: #f8f8f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    overflow: auto; /* Permite rolar o conteúdo se ele ultrapassar o tamanho da div */
+    margin-top: 10px; /* Adiciona um espaçamento superior */
+    margin-left: 20px; /* Adiciona espaçamento à esquerda da div */
+}
+
+  .button-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 430px; /* Ajuste o valor para empurrar o botão mais para baixo */
+}
+
+  .cadastrar-paciente {
+    padding: 15px 25px;
+    background-color: #00695c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+  .cadastrar-paciente:hover {
+    background-color: #004d40;
+}
+  
+  .filtro-container {
+    display: flex;
+    justify-content: center; /* Centraliza o botão horizontalmente */
+    margin-bottom: 30px; /* Adiciona um espaço abaixo do botão de filtro */
+    
+
+}
+
+.filtro-container button {
+    background-color: #f8f8f5;
+    color: #135359; /* Cor do texto */
+    border: 1px solid #135359;
+    padding: 10px 15px; /* Adiciona espaçamento ao botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    
+}
+
+.filtro-container button:hover {
+    background-color: #8EBF70; /* Cor ao passar o mouse */
+}
+  
+  .pacientes-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .paciente-card {
+    background-color: #f8f8f5;
+    border: 1px solid #135359;
+    color: #135359; /* Cor do texto */
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px; /* Ajustar a largura do card */
+
+  }
+  
+  .paciente-card p {
+    margin: 5px 0;
+  }
+  
+  .cadastrar-paciente {
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 25px;
+    background-color: #00695c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cadastrar-paciente:hover {
+    background-color: #004d40;
+  }
+  
+  @media (max-width: 768px) {
+    .pacientes-lista {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .paciente-card {
+      width: 90%; /* Ajusta para ocupar mais espaço em telas pequenas */
+    }
+  
+    .cadastrar-paciente {
+      width: 90%;
+    }
+  }
+  

@@ -1,0 +1,37 @@
+.sidebar {
+    width: 250px;
+    background-color: #A5D686;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+  }
+  
+  .logo p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    font-size: 18px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  nav ul li:hover {
+    background-color: #8EBF70;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+  
