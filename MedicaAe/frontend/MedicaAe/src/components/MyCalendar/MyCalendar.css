@@ -1,0 +1,54 @@
+.react-calendar {
+  background-color: #fcf7f2;
+  padding: 1rem;
+  width: 16.5rem;
+  height: 17rem;
+  text-align: center;
+}
+.react-calendar button {
+  border: none;
+  padding: 10px 6px;
+}
+.react-calendar__navigation button {
+  background-color: transparent;
+}
+.react-calendar__navigation span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #4a5660;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #4a5660;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #4a5660;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #4a5660;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #4a5660;
+}
+.react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+}
+.react-calendar__tile {
+  background-color: transparent;
+  font-weight: bold;
+}
+.react-calendar__tile--active {
+  color: white;
+  border-radius: 50%;
+  background-color: #135359;
+}
+.react-calendar__tile--active:hover {
+  background-color: #15565c;
+}

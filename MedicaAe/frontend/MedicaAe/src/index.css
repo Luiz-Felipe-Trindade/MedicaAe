@@ -14,11 +14,3 @@ body {
   height: 100%;
   width: 100%;
 }
-a.active {
-  z-index: 2;
-  color: #fffbf7;
-  border-radius: 0.4rem;
-  box-shadow: 0.1rem 0.1rem 0.8rem #09262983;
-  border: 1px solid #135359;
-  background-color: #135359;
-}

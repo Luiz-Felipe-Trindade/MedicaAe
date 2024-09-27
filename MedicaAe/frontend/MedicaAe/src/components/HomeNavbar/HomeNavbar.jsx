@@ -25,11 +25,19 @@ export const HomeNavbar = () => {
         )}
       </div>
       <div>
-        <NavLink to={"/"}>Inicio</NavLink>
-        <NavLink to={"/about"}>Sobre</NavLink>
-        <NavLink to={"/faq"}>FAQ</NavLink>
+        <NavLink to={"/"} className={styles.ac}>
+          Inicio
+        </NavLink>
+        <NavLink to={"/about"} className={styles.ac}>
+          Sobre
+        </NavLink>
+        <NavLink to={"/faq"} className={styles.ac}>
+          FAQ
+        </NavLink>
         {/* <NavLink to={"/contact"}>Contato</NavLink> */}
-        <NavLink to={"/pt/dashboard"}>Main</NavLink>
+        <NavLink to={"/dashboard"} className={styles.ac}>
+          Main
+        </NavLink>
       </div>
       <div className={styles.logo}>
         <a>MedicAê</a>
