@@ -2,8 +2,7 @@
 import "./App.css";
 
 // Context API's
-
-import { AuthProvider, useAuth } from "./context/AuthProvider";
+import { AuthProvider } from "./context/AuthProvider";
 
 // Pages
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
@@ -11,50 +10,41 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { FaqPage } from "./pages/FaqPage/FaqPage";
-import { ContactPage } from "./pages/ContactPage/ContactPage";
+import { ConfigPage } from "./pages/SystemPages/ConfigPage/ConfigPage";
+import { DashboardPage } from "./pages/SystemPages/DashboardPage/DashboardPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MainPage } from "./pages/SystemPages/MainPage/MainPage";
 
-import { useEffect } from "react";
-import { Template } from "./components/Template/Template";
 // Components
+import { Template } from "./components/Template/Template";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
-  const rootElement = document.getElementById("root");
-  rootElement.classList.add("unlogged");
-
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
           <Template>
             <Routes>
-              <Route path={"/register"} element={<RegisterPage />}>
-                Registrar
-              </Route>
-              <Route path={"/login"} element={<LoginPage />}>
-                Entrar
-              </Route>
-              <Route path={"/"} element={<HomePage />}>
-                MedicAê
-              </Route>
-              <Route path={"/"} element={<HomePage />}>
-                Inicio
-              </Route>
-              <Route path={"/about"} element={<AboutPage />}>
-                Sobre
-              </Route>
-              {/* <Route path={"/contact"} element={<ContactPage />}>
-                Contato
-              </Route> */}
-              <Route path={"/faq"} element={<FaqPage />}>
-                FAQ
-              </Route>
-              <Route path={"/dashboard"} element={<MainPage />}>
-                Main
-              </Route>
+              <Route path={"/register"} element={<RegisterPage />} />
+
+              <Route path={"/login"} element={<LoginPage />} />
+
+              <Route path={"/"} element={<HomePage />} />
+
+              <Route path={"/about"} element={<AboutPage />} />
+
+              <Route path={"/faq"} element={<FaqPage />} />
+
+              <Route
+                path={"/dashboard"}
+                element={<PrivateRoute element={<DashboardPage />} />}
+              />
+              <Route
+                path={"/configs"}
+                element={<PrivateRoute element={<ConfigPage />} />}
+              />
             </Routes>
           </Template>
         </BrowserRouter>

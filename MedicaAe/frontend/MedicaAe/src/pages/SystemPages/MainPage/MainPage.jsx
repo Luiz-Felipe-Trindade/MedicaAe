@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { NavBar } from "../../../components/NavBar/NavBar";
 export const MainPage = () => {
   return (
-    <div>
+    <div className={styles.main_page}>
       <NavBar />
     </div>
   );
