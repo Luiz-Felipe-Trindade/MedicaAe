@@ -10,6 +10,7 @@ import { BiBookmark } from "react-icons/bi";
 import { HiOutlineCog8Tooth } from "react-icons/hi2";
 import { HiOutlineArchiveBox } from "react-icons/hi2";
 import { FiLogOut } from "react-icons/fi";
+import { MdOutlinePeopleAlt } from "react-icons/md";
 
 export const NavBar = () => {
   const { isAuthenticated, login, logout } = useAuth();
@@ -34,6 +35,10 @@ export const NavBar = () => {
             <NavLink to={"/medicies"} className={styles.link}>
               <BiBookmark className={styles.icons} />
               Medicamentos
+            </NavLink>
+            <NavLink to={"/patients"} className={styles.link}>
+              <MdOutlinePeopleAlt className={styles.icons} />
+              Pacientes
             </NavLink>
             <NavLink to={"/storage"} className={styles.link}>
               <HiOutlineArchiveBox className={styles.icons} />
