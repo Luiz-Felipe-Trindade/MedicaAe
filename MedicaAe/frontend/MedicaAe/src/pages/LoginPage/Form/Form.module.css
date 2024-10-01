@@ -1,0 +1,17 @@
+.base_button {
+  color: #fffbf7;
+  padding: 0.8rem 7.5rem;
+  border-radius: 0.7rem;
+  margin: 1rem 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #09262983;
+  border: 1px solid #135359;
+  background-color: #135359;
+
+  cursor: pointer;
+
+  font-weight: bolder;
+  font-size: large;
+}
+.base_button:active {
+  background-color: #0d393d;
+}
