@@ -12,7 +12,7 @@ export const Form = () => {
 
   const handleSubmit = (e) => {
     login();
-    navigate("/dashboard");
+    navigate("/");
     e.preventDefault();
   };
   return (

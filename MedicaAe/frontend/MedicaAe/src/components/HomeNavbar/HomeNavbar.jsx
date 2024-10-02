@@ -14,6 +14,9 @@ export const HomeNavbar = () => {
             <NavLink to={"/login"} onClick={logout}>
               Logout
             </NavLink>
+            <NavLink to={"/dashboard"} className={styles.register_btn}>
+              Acessar Sistema
+            </NavLink>
           </>
         ) : (
           <>
@@ -35,9 +38,7 @@ export const HomeNavbar = () => {
           FAQ
         </NavLink>
         {/* <NavLink to={"/contact"}>Contato</NavLink> */}
-        <NavLink to={"/dashboard"} className={styles.ac}>
-          Main
-        </NavLink>
+        
       </div>
       <div className={styles.logo}>
         <a>MedicAê</a>

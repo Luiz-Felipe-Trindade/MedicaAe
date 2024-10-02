@@ -68,3 +68,11 @@
   display: flex;
   flex-direction: row-reverse;
 }
+.clock{
+  padding: 0rem 30rem;
+}
+.iten_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
