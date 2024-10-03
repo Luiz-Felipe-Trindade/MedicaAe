@@ -1,17 +1,47 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
+import axios from 'axios';
 import styles from "./Form.module.css";
 
 export const Form = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   const [displayName, setDisplayName] = useState("");
   const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
   const [confirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validação: checar se email e confirmação de email correspondem
+    if (email !== confirmEmail) {
+      alert('Os emails não correspondem!');
+      return;
+    }
+
+    // Validação: checar se senha e confirmação de senha correspondem
+    if (password !== confirmPassword) {
+      alert('As senhas não correspondem!');
+      return;
+    }
+
+    try {
+      // Enviar dados de registro para o back-end
+      const response = await axios.post('http://localhost:3000/auth/register', {
+        name: displayName,
+        cpf,
+        email,
+        password
+      });
+
+      alert('Registro bem-sucedido!');
+    } catch (error) {
+      console.error('Erro ao registrar:', error);
+      alert(`Falha no registro: ${error.response.data.message || error.response.data.error}`);
+    }
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -30,7 +60,7 @@ export const Form = () => {
             />
             <InputWithLabel
               label="CPF"
-              type="number"
+              type="text"
               name="cpf"
               required
               placeholder="000.000.000-00"
@@ -55,7 +85,7 @@ export const Form = () => {
             <InputWithLabel
               label="Confirmação de senha"
               type="password"
-              name="password"
+              name="confirmPassword"
               required
               placeholder="••••••••"
               value={confirmPassword}
@@ -78,7 +108,7 @@ export const Form = () => {
         />
         <InputWithLabel
           label="Confirmação de email"
-          name="email"
+          name="confirmEmail"
           required
           placeholder="exemplo@medicae.com"
           value={confirmEmail}
@@ -86,7 +116,9 @@ export const Form = () => {
             setConfirmEmail(e.target.value);
           }}
         />
-        <button className={styles.base_button}>Cadastrar</button>
+        <button type="submit" className={styles.base_button}>
+          Cadastrar
+        </button>
       </form>
     </div>
   );
