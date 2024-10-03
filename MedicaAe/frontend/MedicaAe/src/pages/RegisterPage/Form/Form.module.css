@@ -17,6 +17,7 @@
 .small_input {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .inputs {
   display: flex;

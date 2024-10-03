@@ -1,9 +1,9 @@
-import { NavBar } from "../../../components/NavBar/NavBar";
-import MyCalendar from "../../../components/MyCalendar/MyCalendar";
-import styles from "./DashboardPage.module.css";
 import { FaFilter } from "react-icons/fa";
-import Clock from "../../../components/Clock/Clock";
 import { Cards } from "../../../components/Cards/Cards";
+import Clock from "../../../components/Clock/Clock";
+import MyCalendar from "../../../components/MyCalendar/MyCalendar";
+import { NavBar } from "../../../components/NavBar/NavBar";
+import styles from "./DashboardPage.module.css";
 
 export const DashboardPage = () => {
   const card = [
@@ -12,7 +12,21 @@ export const DashboardPage = () => {
       remedy: "Nimesulida 100mg",
       dosage: 2,
       patient: "João Carlos Silva",
-      action: "Administrado",
+      action: "Administrado/Agendado",
+      time: "17:30",
+    },{
+      id:4,
+      remedy: "Nimesulida 100mg",
+      dosage: 2,
+      patient: "João Carlos Silva",
+      action: "Administrado/Agendado",
+      time: "17:30",
+    },{
+      id:5,
+      remedy: "Nimesulida 100mg",
+      dosage: 2,
+      patient: "João Carlos Silva",
+      action: "Administrado/Agendado",
       time: "17:30",
     },
     {
@@ -20,7 +34,7 @@ export const DashboardPage = () => {
       remedy: "Nimesulida 100mg",
       dosage: 2,
       patient: "João Carlos Silva",
-      action: "Administrado",
+      action: "Administrado/Agendado",
       time: "17:30",
     },
     {
@@ -28,7 +42,7 @@ export const DashboardPage = () => {
       remedy: "Nimesulida 100mg",
       dosage: 2,
       patient: "João Carlos Silva",
-      action: "Administrado",
+      action: "Administrado/Agendado",
       time: "17:30",
     },
     

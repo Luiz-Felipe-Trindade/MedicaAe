@@ -1,8 +1,12 @@
-import { useState, useEffect } from "react";
-import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
-import styles from "./Form.module.css";
-import { useAuth } from "../../../context/AuthProvider";
+// React
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// Components
+import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
+// ContextAPI
+import { useAuth } from "../../../context/AuthProvider";
+// Styles
+import styles from "./Form.module.css";
 
 export const Form = () => {
   const [email, setEmail] = useState("");

@@ -1,12 +1,12 @@
+// React
 import { NavLink } from "react-router-dom";
-import styles from "./HomePage.module.css";
+// Components
 import { HomeNavbar } from "../../components/HomeNavbar/HomeNavbar";
-import { useAuth } from "../../context/AuthProvider";
-import { FooterBar } from "../../components/FooterBar/FooterBar";
 import { IconsBar } from "../../components/IconsBar/IconsBar";
+// Styles
+import styles from "./HomePage.module.css";
 
 export const HomePage = () => {
-  const { isAuthenticated, login, logout } = useAuth();
 
   return (
     <div className={styles.container}>
