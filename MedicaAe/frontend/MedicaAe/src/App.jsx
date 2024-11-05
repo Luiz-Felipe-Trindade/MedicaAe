@@ -12,6 +12,7 @@ import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { FaqPage } from "./pages/FaqPage/FaqPage";
 import { ConfigPage } from "./pages/SystemPages/ConfigPage/ConfigPage";
 import { DashboardPage } from "./pages/SystemPages/DashboardPage/DashboardPage";
+import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -45,7 +46,11 @@ function App() {
                 path={"/configs"}
                 element={<PrivateRoute element={<ConfigPage />} />}
               />
-              
+
+
+              <Route
+              path={"*"} element={<NotFoundPage />}
+              />
             </Routes>
           </Template>
         </BrowserRouter>
