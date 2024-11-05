@@ -19,8 +19,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import { Template } from "./components/Template/Template";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+<<<<<<< HEAD
 import { Patients } from "./pages/PatientsPage/Patients";
 import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
+=======
+>>>>>>> cf003a8ba47522a68da4f695139506ca2a92a23b
 
 function App() {
   return (
@@ -47,6 +50,7 @@ function App() {
                 path={"/configs"}
                 element={<PrivateRoute element={<ConfigPage />} />}
               />
+<<<<<<< HEAD
               <Route
                 path={"/patients"}
                 element={<PrivateRoute element={<Patients />} />}
@@ -55,6 +59,9 @@ function App() {
                 path={"/storage"}
                 element={<PrivateRoute element={<StoragePage/>} />}
               />
+=======
+              
+>>>>>>> cf003a8ba47522a68da4f695139506ca2a92a23b
             </Routes>
           </Template>
         </BrowserRouter>

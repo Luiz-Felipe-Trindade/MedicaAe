@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
-import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
-import { Form } from "./Form/Form";
-import styles from "./RegisterPage.module.css";
+// React
 import { NavLink } from "react-router-dom";
+// Components
 import { FooterBar } from "../../components/FooterBar/FooterBar";
 import { IconsBar } from "../../components/IconsBar/IconsBar";
+import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
+// Form
+import { Form } from "./Form/Form";
+// Styles
+import styles from "./RegisterPage.module.css";
+
 export const RegisterPage = () => {
   return (
     <div className={styles.container}>

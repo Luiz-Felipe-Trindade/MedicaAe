@@ -1,9 +1,14 @@
+// React
 import { NavLink } from "react-router-dom";
-import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
-import { Form } from "./Form/Form";
-import styles from "./LoginPage.module.css";
+// Components
 import { FooterBar } from "../../components/FooterBar/FooterBar";
 import { IconsBar } from "../../components/IconsBar/IconsBar";
+import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
+// Form
+import { Form } from "./Form/Form";
+// Styles
+import styles from "./LoginPage.module.css";
+
 export const LoginPage = () => {
   return (
     <div className={styles.container}>

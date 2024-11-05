@@ -1,12 +1,17 @@
+// Components
 import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
-import styles from "./AboutPage.module.css";
 import { IconsBar } from "../../components/IconsBar/IconsBar";
+// Styles 
+import styles from "./AboutPage.module.css";
+
 export const AboutPage = () => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.background}>
+
           <TinyHomeNavbar />
+
           <div className={styles.subcontainer}>
             <div className={styles.top}>
               <h1>Sobre</h1>
