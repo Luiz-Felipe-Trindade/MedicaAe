@@ -20,6 +20,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Template } from "./components/Template/Template";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import { Patients } from "./pages/PatientsPage/Patients";
+import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
               <Route
                 path={"/patients"}
                 element={<PrivateRoute element={<Patients />} />}
+              />
+              <Route
+                path={"/storage"}
+                element={<PrivateRoute element={<StoragePage/>} />}
               />
             </Routes>
           </Template>
