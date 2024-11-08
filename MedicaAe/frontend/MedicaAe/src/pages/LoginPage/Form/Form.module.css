@@ -1,4 +1,5 @@
 .base_button {
+  
   color: #fffbf7;
   padding: 0.8rem 7.5rem;
   border-radius: 0.7rem;
@@ -14,4 +15,19 @@
 }
 .base_button:active {
   background-color: #0d393d;
+}
+.error_message {
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  right: 62.5%;
+  bottom: 40%;
+  background: #ffdede; /* Fundo semi-transparente */
+  border-radius: 10rem;
+  color: #a33030;
+  border: 2px solid #a33030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Para aparecer acima de outros elementos */
 }

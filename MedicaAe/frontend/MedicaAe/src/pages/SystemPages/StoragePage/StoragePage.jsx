@@ -15,7 +15,7 @@ export const StoragePage = () => {
                 <FaFilter className={styles.icon} size={13} />
               </button>
             </div>
-            <label>Estoque de madicamentos</label>
+            <label>Estoque de medicamentos</label>
             <div className={styles.iten_box}></div>
           </div>
         </div>

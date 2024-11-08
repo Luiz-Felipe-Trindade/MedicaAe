@@ -58,7 +58,7 @@ export const Form = () => {
           }}
         />
         <button className={styles.base_button}>Entrar</button>
-        {error && <p className={styles.error_message}>{error}</p>} {/* Exibe erro se houver */}
+        {error && <p className={styles.error_message}>{error}</p>} {/* Exibe erro se houver */} 
       </form>
     </div>
   );

@@ -6,6 +6,7 @@ import { NavBar } from "../../../components/NavBar/NavBar";
 import styles from "./DashboardPage.module.css";
 
 export const DashboardPage = () => {
+  
   const card = [
     {
       id:1,
