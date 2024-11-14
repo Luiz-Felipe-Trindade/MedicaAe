@@ -1,0 +1,72 @@
+.background {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+.popup {
+  height: 80%;
+  width: 80%;
+  margin: 3%;
+  z-index: 2000;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 3px solid transparent;
+
+  border-radius: 3rem;
+  background-color: #fffbf7;
+}
+.top_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 99%;
+  height: 7%;
+}
+.tittle {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.close_button {
+  width: 2.5rem;
+  height: 2rem;
+  margin: 1rem;
+
+  border: none;
+  border-radius: 0.2rem;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+.close_button:hover {
+  background-color: #b6b6b689;
+}
+.botton_bar {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: baseline;
+}
+.save_button {
+  border: none;
+  border-radius: 0.6rem;
+
+  padding: 1.3rem 5.5rem;
+  margin: 2rem;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fffbf7;
+  background-color: #135359;
+
+  cursor: pointer;
+}
+.save_button:hover {
+  background-color: #0d3d42;
+}

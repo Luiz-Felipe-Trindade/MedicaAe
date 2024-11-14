@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
+import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
 import styles from "./Form.module.css";
-import { useAuth } from "../../../context/AuthProvider";
+import { useAuth } from "../../../../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Adicionar axios para fazer a requisição
 
@@ -58,7 +58,7 @@ export const Form = () => {
           }}
         />
         <button className={styles.base_button}>Entrar</button>
-        {error && <p className={styles.error_message}>{error}</p>} {/* Exibe erro se houver */}
+        {error && <p className={styles.error_message}>{error}</p>} {/* Exibe erro se houver */} 
       </form>
     </div>
   );

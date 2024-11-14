@@ -1,0 +1,98 @@
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  width: 50%;
+}
+.input_with_label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.input_with_label .input_left {
+  margin-right: 20%;
+  width: 40%;
+}
+.input_with_label input {
+  margin-bottom: 10%;
+}
+
+.input_with_label .input_right {
+  width: 40%;
+}
+.radios {
+  display: flex;
+  margin-bottom: 2%;
+}
+.radios .status {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+}
+.alergia {
+  width: 40%;
+}
+.textarea {
+  width: 50%;
+  height: 100%;
+}
+.textarea textarea {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-color: #a1d683;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  background: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background-color: #135359;
+  border-color: #135359;
+}
+.save {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: end;
+}
+.save_button {
+  color: #fffbf7;
+  background-color: #135359;
+  border: none;
+
+  border-radius: 0.5rem;
+
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  justify-content: center;
+
+  width: 25%;
+  height: 5%;
+  margin: 10% 10%;
+  padding-top: 0rem;
+}
