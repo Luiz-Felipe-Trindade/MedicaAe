@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-// React
-import { useState } from "react";
-// Components
-import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
-// Styles
-=======
 import { useState } from "react";
 import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
 import axios from 'axios';
->>>>>>> 3102a48b3a90286bd6d990704c0d174b9a0e1593
 import styles from "./Form.module.css";
 
 export const Form = () => {

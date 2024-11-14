@@ -2,6 +2,7 @@ import styles from "./StoragePage.module.css";
 import { FaFilter } from "react-icons/fa";
 
     import { NavBar } from "../../../components/NavBar/NavBar";
+import { NavLink } from "react-router-dom";
 
 export const StoragePage = () => {
   return (
@@ -15,12 +16,12 @@ export const StoragePage = () => {
                 <FaFilter className={styles.icon} size={13} />
               </button>
             </div>
-            <label>Estoque de madicamentos</label>
+            <label>Estoque de medicamentos</label>
             <div className={styles.iten_box}></div>
           </div>
         </div>
-        <button className={styles.button}>Adicionar medicamento</button>
-    </div>
+             <NavLink to = {"/registermedicine"} className={styles.button}> Adicionar medicamento </NavLink>
+      </div>
 
   )
 }
