@@ -3,7 +3,6 @@ import styles from "./StoragePage.module.css";
 import { NavBar } from "../../../components/NavBar/NavBar";
 import { NavLink } from "react-router-dom";
 import { Filter } from "./components/Filter/Filter";
-import { NavLink } from "react-router-dom";
 
 export const StoragePage = () => {
   return (
