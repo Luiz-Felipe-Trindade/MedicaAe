@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
+import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
 import axios from 'axios';
 import styles from "./Form.module.css";
 

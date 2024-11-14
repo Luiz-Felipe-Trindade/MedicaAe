@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
+import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
 import styles from "./Form.module.css";
-import { useAuth } from "../../../context/AuthProvider";
+import { useAuth } from "../../../../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Adicionar axios para fazer a requisição
 

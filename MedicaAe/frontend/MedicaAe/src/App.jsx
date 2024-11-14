@@ -13,7 +13,7 @@ import { FaqPage } from "./pages/FaqPage/FaqPage";
 import { ConfigPage } from "./pages/SystemPages/ConfigPage/ConfigPage";
 import { DashboardPage } from "./pages/SystemPages/DashboardPage/DashboardPage";
 import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
-// import { Patients } from "./pages/PatientsPage/Patients";
+import { PatientsPage } from "./pages/SystemPages/PatientsPage/PatientsPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -21,8 +21,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import { Template } from "./components/Template/Template";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import { PopUp } from "./components/PopUp/PopUp";
-
+import { AddToStorePage } from "./pages/SystemPages/StoragePage/AddToStoragePage/AddToStorePage";
+import { MediciesPage } from "./pages/SystemPages/MediciesPage/MediciesPage";
+import { AddPatientsPage } from "./pages/SystemPages/PatientsPage/AddPatientsPage/AddPatientsPage";
 
 function App() {
   return (
@@ -51,13 +52,24 @@ function App() {
               />
               <Route
                 path={"/patients"}
-                element={<PrivateRoute element={<PopUp/>} />}
+                element={<PrivateRoute element={<PatientsPage />} />}
+              />
+              <Route
+                path={"/patients/add"}
+                element={<PrivateRoute element={<AddPatientsPage />} />}
               />
               <Route
                 path={"/storage"}
-                element={<PrivateRoute element={<StoragePage/>} />}
+                element={<PrivateRoute element={<StoragePage />} />}
               />
-              
+              <Route
+                path={"/storage/add"}
+                element={<PrivateRoute element={<AddToStorePage />} />}
+              />
+              <Route
+                path={"/medicies"}
+                element={<PrivateRoute element={<MediciesPage />} />}
+              />
             </Routes>
           </Template>
         </BrowserRouter>
