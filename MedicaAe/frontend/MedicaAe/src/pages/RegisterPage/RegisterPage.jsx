@@ -5,7 +5,7 @@ import { FooterBar } from "../../components/FooterBar/FooterBar";
 import { IconsBar } from "../../components/IconsBar/IconsBar";
 import { TinyHomeNavbar } from "../../components/TinyHomeNavbar/TinyHomeNavbar";
 // Form
-import { Form } from "./Form/Form";
+import { Form } from "./components/Form/Form";
 // Styles
 import styles from "./RegisterPage.module.css";
 

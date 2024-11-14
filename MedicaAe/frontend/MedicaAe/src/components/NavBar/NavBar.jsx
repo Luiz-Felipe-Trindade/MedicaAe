@@ -24,14 +24,10 @@ export const NavBar = () => {
               <LuHome className={styles.icons} />
               Início
             </NavLink>
-            <NavLink to={"/search"} className={styles.link}>
-              <FiSearch className={styles.icons} />
-              Pesquisa
-            </NavLink>
-            <NavLink to={"/alerts"} className={styles.link}>
+            {/* <NavLink to={"/alerts"} className={styles.link}>
               <LuBell className={styles.icons} />
               Notificações
-            </NavLink>
+            </NavLink> */}
             <NavLink to={"/medicies"} className={styles.link}>
               <BiBookmark className={styles.icons} />
               Medicamentos

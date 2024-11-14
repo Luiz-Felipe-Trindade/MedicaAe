@@ -4,6 +4,7 @@ import { Label } from "./Label";
 import { Input } from "./Input";
 
 export const InputWithLabel = ({ label, placeholder, ...rest }) => {
+  //label, placeholder, type
   return (
     <div className={styles.input_box}>
       <Label>{label}</Label>

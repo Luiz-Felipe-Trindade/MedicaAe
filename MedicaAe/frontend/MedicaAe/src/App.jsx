@@ -12,6 +12,8 @@ import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { FaqPage } from "./pages/FaqPage/FaqPage";
 import { ConfigPage } from "./pages/SystemPages/ConfigPage/ConfigPage";
 import { DashboardPage } from "./pages/SystemPages/DashboardPage/DashboardPage";
+import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
+import { PatientsPage } from "./pages/SystemPages/PatientsPage/PatientsPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,9 +21,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import { Template } from "./components/Template/Template";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-//import { Patients } from "./pages/PatientsPage/Patients";
+<<<<<<< HEAD
+import { Patients } from "./pages/PatientsPage/Patients";
 import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
-import { RegisterMedicine } from "./pages/SystemPages/RegisterMedicine/RegisterMedicine";
+=======
+>>>>>>> cf003a8ba47522a68da4f695139506ca2a92a23b
 
 function App() {
   return (
@@ -48,13 +52,17 @@ function App() {
                 path={"/configs"}
                 element={<PrivateRoute element={<ConfigPage />} />}
               />
-              {/*<Route
+              <Route
                 path={"/patients"}
-                element={<PrivateRoute element={<Patients />} />}
-              />*/}
+                element={<PrivateRoute element={<PatientsPage />} />}
+              />
+              <Route
+                path={"/patients/add"}
+                element={<PrivateRoute element={<AddPatientsPage />} />}
+              />
               <Route
                 path={"/storage"}
-                element={<PrivateRoute element={<StoragePage/>} />}
+                element={<PrivateRoute element={<StoragePage />} />}
               />
               <Route
                 path={"/registermedicine"}

@@ -11,6 +11,7 @@
 .container {
   background-image: url(/src/assets/image.png);
   background-position: 0rem 26rem;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;

@@ -6,12 +6,12 @@
   display: flex;
   flex-direction: column;
 
-  background-image: url(./topo.png);
+  background-image: url(../../assets/topo.png);
   background-size: 40rem;
   background-repeat: no-repeat;
 }
 .background {
-  background-image: url(./base.png);
+  background-image: url(../../assets/base.png);
   background-size: 40rem;
   background-repeat: no-repeat;
   background-position: 84rem 30rem;

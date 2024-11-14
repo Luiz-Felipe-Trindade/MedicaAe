@@ -1,6 +1,5 @@
 import { NavBar } from "../../../components/NavBar/NavBar";
 import { InputWithLabel } from "../../../components/Inputs/InputWithLabel";
-import { Input } from "../../../components/Inputs/Input";
 
 // Icons
 import { MdOutlineAddCircleOutline } from "react-icons/md";
@@ -17,19 +16,15 @@ export const ConfigPage = () => {
       <div className={styles.subcontainer}>
         <h2 className={styles.config_tittle}>Editar Perfil</h2>
         <form onSubmit={handleSubmit}>
-          <InputWithLabel label={"Usuário"} placeholder={"@username123"} />
+          <InputWithLabel label={"Nome"} placeholder={"Raimundo Neto"} />
 
           <InputWithLabel label={"E-mail"} placeholder={"email@domain.com"} />
 
-          <InputWithLabel label={"Lorem"} placeholder={"Lorem"} />
-          <InputWithLabel placeholder={"Lorem"} />
-          <InputWithLabel placeholder={"Lorem"} />
+          <h2>Segurança</h2>
+
+          <InputWithLabel label={"Senha"} placeholder={"********"} />
         </form>
-        <button className={styles.add_button}>
-          <MdOutlineAddCircleOutline size={23} />
-          <p>Lorem</p>
-        </button>
-        <button submit className={styles.save_btn}>
+        <button className={styles.save_btn} onSubmit={handleSubmit}>
           Salvar Mudanças
         </button>
       </div>
