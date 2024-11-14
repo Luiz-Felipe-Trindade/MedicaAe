@@ -24,11 +24,7 @@ export const NavBar = () => {
               <LuHome className={styles.icons} />
               Início
             </NavLink>
-            {/* <NavLink to={"/alerts"} className={styles.link}>
-              <LuBell className={styles.icons} />
-              Notificações
-            </NavLink> */}
-            <NavLink to={"/medicies"} className={styles.link}>
+            <NavLink to={"/medicines"} className={styles.link}>
               <BiBookmark className={styles.icons} />
               Medicamentos
             </NavLink>

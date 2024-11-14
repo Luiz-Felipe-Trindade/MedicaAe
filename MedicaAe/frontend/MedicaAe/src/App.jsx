@@ -14,6 +14,9 @@ import { ConfigPage } from "./pages/SystemPages/ConfigPage/ConfigPage";
 import { DashboardPage } from "./pages/SystemPages/DashboardPage/DashboardPage";
 import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
 import { PatientsPage } from "./pages/SystemPages/PatientsPage/PatientsPage";
+import { AddPatientsPage } from "./pages/SystemPages/PatientsPage/AddPatientsPage/AddPatientsPage";
+import { RegisterMedicine } from "./pages/SystemPages/RegisterMedicine/RegisterMedicine";
+import { MedicinesPage } from "./pages/SystemPages/MedicinesPage/MedicinesPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -21,11 +24,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import { Template } from "./components/Template/Template";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-<<<<<<< HEAD
-import { Patients } from "./pages/PatientsPage/Patients";
-import { StoragePage } from "./pages/SystemPages/StoragePage/StoragePage";
-=======
->>>>>>> cf003a8ba47522a68da4f695139506ca2a92a23b
 
 function App() {
   return (
@@ -66,9 +64,12 @@ function App() {
               />
               <Route
                 path={"/registermedicine"}
-                element={<PrivateRoute element={<RegisterMedicine/>} />}
+                element={<PrivateRoute element={<RegisterMedicine />} />}
               />
-              
+              <Route
+                path={"/medicines"}
+                element={<PrivateRoute element={<MedicinesPage />} />}
+              />
             </Routes>
           </Template>
         </BrowserRouter>
