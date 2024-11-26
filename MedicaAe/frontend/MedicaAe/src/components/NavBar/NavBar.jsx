@@ -4,13 +4,12 @@ import { NavLink } from "react-router-dom";
 
 //icons
 import { LuHome } from "react-icons/lu";
-import { FiSearch } from "react-icons/fi";
-import { LuBell } from "react-icons/lu";
 import { BiBookmark } from "react-icons/bi";
 import { HiOutlineCog8Tooth } from "react-icons/hi2";
 import { HiOutlineArchiveBox } from "react-icons/hi2";
 import { FiLogOut } from "react-icons/fi";
 import { MdOutlinePeopleAlt } from "react-icons/md";
+import { BsClipboard2Check } from "react-icons/bs";
 
 export const NavBar = () => {
   const { isAuthenticated, login, logout } = useAuth();
@@ -27,6 +26,10 @@ export const NavBar = () => {
             <NavLink to={"/medicines"} className={styles.link}>
               <BiBookmark className={styles.icons} />
               Medicamentos
+            </NavLink>
+            <NavLink to={"/treatment"} className={styles.link}>
+              <BsClipboard2Check className={styles.icons} />
+              Tratamentos
             </NavLink>
             <NavLink to={"/patients"} className={styles.link}>
               <MdOutlinePeopleAlt className={styles.icons} />

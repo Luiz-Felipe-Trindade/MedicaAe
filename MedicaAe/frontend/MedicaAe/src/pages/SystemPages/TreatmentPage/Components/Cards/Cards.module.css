@@ -1,0 +1,28 @@
+.container {
+  border: 1px solid;
+  padding: 0.5rem;
+  margin: 1rem;
+  height: 12rem;
+  cursor: pointer;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  width: 11rem;
+}
+.text {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+.time {
+  text-align: center;
+  justify-content: center;
+  padding-top: 0.7rem;
+}
+.icon {
+  text-align: end;
+  padding: 0;
+  margin: 0;
+}
