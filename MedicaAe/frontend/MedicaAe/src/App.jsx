@@ -18,6 +18,7 @@ import { AddPatientsPage } from "./pages/SystemPages/PatientsPage/AddPatientsPag
 import { RegisterMedicine } from "./pages/SystemPages/RegisterMedicine/RegisterMedicine";
 import { MedicinesPage } from "./pages/SystemPages/MedicinesPage/MedicinesPage";
 import { StorageEntrancePage } from "./pages/SystemPages/StorageEntrancePage/StorageEntrancePage";
+import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -43,6 +44,9 @@ function App() {
               <Route path={"/about"} element={<AboutPage />} />
 
               <Route path={"/faq"} element={<FaqPage />} />
+
+              <Route
+              path={"*"} element={<NotFoundPage />} />
 
               <Route
                 path={"/dashboard"}
