@@ -17,6 +17,7 @@ import { PatientsPage } from "./pages/SystemPages/PatientsPage/PatientsPage";
 import { AddPatientsPage } from "./pages/SystemPages/PatientsPage/AddPatientsPage/AddPatientsPage";
 import { RegisterMedicine } from "./pages/SystemPages/RegisterMedicine/RegisterMedicine";
 import { MedicinesPage } from "./pages/SystemPages/MedicinesPage/MedicinesPage";
+import { StorageEntrancePage } from "./pages/SystemPages/StorageEntrancePage/StorageEntrancePage";
 
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -74,6 +75,11 @@ function App() {
               <Route
                 path={"/treatment"}
                 element={<PrivateRoute element={<TreatmentPage />} />}
+               />
+               <Route
+                path={"/storageentrance"}
+                element={<PrivateRoute element={<StorageEntrancePage />} />}
+               />
               />
             </Routes>
           </Template>
