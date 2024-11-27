@@ -36,18 +36,11 @@ function App() {
           <Template>
             <Routes>
               <Route path={"/register"} element={<RegisterPage />} />
-
               <Route path={"/login"} element={<LoginPage />} />
-
               <Route path={"/"} element={<HomePage />} />
-
               <Route path={"/about"} element={<AboutPage />} />
-
               <Route path={"/faq"} element={<FaqPage />} />
-
-              <Route
-              path={"*"} element={<NotFoundPage />} />
-
+              <Route path={"*"} element={<NotFoundPage />} />
               <Route
                 path={"/dashboard"}
                 element={<PrivateRoute element={<DashboardPage />} />}
@@ -79,11 +72,10 @@ function App() {
               <Route
                 path={"/treatment"}
                 element={<PrivateRoute element={<TreatmentPage />} />}
-               />
-               <Route
+              />
+              <Route
                 path={"/storageentrance"}
                 element={<PrivateRoute element={<StorageEntrancePage />} />}
-               />
               />
             </Routes>
           </Template>
