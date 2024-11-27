@@ -9,6 +9,7 @@ export const AboutPage = () => {
     <>
       <div className={styles.container}>
         <div className={styles.background}>
+          <div className={styles.medicaezinho}>
 
           <TinyHomeNavbar />
 
@@ -46,6 +47,7 @@ export const AboutPage = () => {
           </div>
           <div className={styles.icons}>
             <IconsBar />
+           </div>
           </div>
         </div>
       </div>

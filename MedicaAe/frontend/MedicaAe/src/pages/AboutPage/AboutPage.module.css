@@ -2,6 +2,8 @@
   height: 100%;
   width: 100%;
   background-color: #a1d683;
+  zoom: 80%;
+  
 
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
 }
 .background {
   background-image: url(../../assets/base.png);
-  background-size: 40rem;
+  background-size: 40rem;                              
   background-repeat: no-repeat;
   background-position: 84rem 30rem;
 }
@@ -22,6 +24,7 @@ h1 {
 p {
   font-size: 1.4rem;
   font-weight: 500;
+  padding: 3.5rem;
 }
 .subcontainer {
   display: flex;
@@ -34,6 +37,8 @@ p {
   font-size: larger;
   justify-content: center;
   text-align: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 .fp {
   margin: 6.3rem;
@@ -41,8 +46,20 @@ p {
 .sp {
   margin: 9.85rem 4rem 0rem 6rem;
   width: 50%;
+  margin-top: -7rem;
 }
 
 .icons {
   margin-left: 2%;
+  background-color:#a1d683;
+  margin-top: -4rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.medicaezinho {
+  background-image: url(../../assets/medicaezinho.png);
+  background-size: 15rem;            
+  background-repeat: no-repeat;
+  background-position: 98rem 34rem;
 }
