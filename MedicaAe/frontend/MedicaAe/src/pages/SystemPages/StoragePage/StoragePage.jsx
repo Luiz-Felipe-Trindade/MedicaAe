@@ -14,7 +14,7 @@ export const StoragePage = () => {
           <label>Estoque de medicamentos</label>
           <div className={styles.iten_box}></div>
         </div>
-        <NavLink className={styles.button} to={"/registermedicine"}>
+        <NavLink className={styles.button} to={"/storage/entrance"}>
           Adicionar Medicamento
         </NavLink>
       </div>

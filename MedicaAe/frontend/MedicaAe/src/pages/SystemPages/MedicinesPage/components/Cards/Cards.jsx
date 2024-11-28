@@ -3,7 +3,7 @@ import { useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { CardsPopUp } from "../CardsPopUp/CardsPopUp";
 
-export const Cards = ({ id, remedy, dosage, patient, action, time }) => {
+export const Cards = ({ medicies }) => {
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
   const handleOpenPopUp = () => {
@@ -16,19 +16,21 @@ export const Cards = ({ id, remedy, dosage, patient, action, time }) => {
   return (
     <div className={styles.container} onClick={handleOpenPopUp}>
       {isPopUpOpen && (
-        <CardsPopUp onClose={handleClosePopUp} tittle={"Editar Tratamento"} />
+        <CardsPopUp
+          onClose={handleClosePopUp}
+          tittle={"Editar Medicamento"}
+          medicies={medicies}
+        />
       )}
       <div className={styles.infos}>
-        <p className={styles.text}>{remedy}</p>
-        <p className={styles.text}>{dosage} dose(s)</p>
-        <p className={styles.text}>{patient}</p>
+        <p className={styles.text}>Nome: {medicies.name}</p>
+        <p className={styles.text}>Dosagem: {medicies.dosage}mg</p>
+        <p className={styles.text}>Indicação: {medicies.indication}</p>
+        <p className={styles.text}>
+          Genérico: {medicies.generic ? "Sim" : "Não"}
+        </p>
       </div>
-      <div className={styles.status}>
-        <p className={styles.text}>{action}</p>
-        <div className={styles.time}>
-          <p className={styles.text}>{time}</p>
-        </div>
-      </div>
+      <p className={styles.text}>Clique para ver a descrição</p>
       <div className={styles.icon}>
         <IoEye size={25} />
       </div>

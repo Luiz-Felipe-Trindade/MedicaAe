@@ -62,7 +62,7 @@ function App() {
                 element={<PrivateRoute element={<StoragePage />} />}
               />
               <Route
-                path={"/registermedicine"}
+                path={"/medicines/add"}
                 element={<PrivateRoute element={<RegisterMedicine />} />}
               />
               <Route
@@ -74,7 +74,7 @@ function App() {
                 element={<PrivateRoute element={<TreatmentPage />} />}
               />
               <Route
-                path={"/storageentrance"}
+                path={"/storage/entrance"}
                 element={<PrivateRoute element={<StorageEntrancePage />} />}
               />
             </Routes>

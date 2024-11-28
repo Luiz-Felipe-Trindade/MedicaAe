@@ -1,89 +1,91 @@
 .page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-  .subpage {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 2%;
-  }
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.subpage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 91%;
+  padding: 1% 2%;
+}
+.content {
+  display: flex;
+  height: 100%;
+}
 
-  .left_box{
-    display: flex;
-    flex-direction: column;
-  }
+.left_box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
 
-  .RegisterMedicine_title{
-    font-size: 2.5rem;
+.RegisterMedicine_title {
+  font-size: 2.5rem;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.input_with_label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-right: 20%;
+}
 
-  }
-  .inputs {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-    width: 50%;
-  }
-  .input_with_label {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-right: 20%;
-  }
+.textarea {
+  width: 25%;
+  height: 70%;
+}
+.textarea textarea {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: 40%;
+  border-color: #a1d683;
+}
 
-  .textarea {
-    width: 50%;
-    height: 50%;
-  }
-  .textarea textarea {
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    width: 40%;
-    border-color: #a1d683;
-  }
+.radios {
+  display: flex;
+  margin-bottom: 2%;
+}
+.radios .type {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+}
 
-  .radios {
-    display: flex;
-    margin-bottom: 2%;
-  }
-  .radios .type {
-    display: flex;
-    flex-direction: column;
-    margin-right: 10%;
-  }
+.save {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: end;
+}
 
-  .save {
-    width: 50%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: end;
-  }
+.button {
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: end;
+  width: 25%;
+}
 
-  .button{
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-content: end;
-    width: 25%;
-  }
-
-  .save_button {
-    color: #fffbf7;
-    background-color: #135359;
-    border: none;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1rem;
-    cursor: pointer;
-    justify-content: center;
-    width: 25%;
-    height: 5%;
-    margin: 10% 10%;
-    padding-top: 0rem;
-  }
-  
+.save_button {
+  color: #fffbf7;
+  background-color: #135359;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  justify-content: center;
+  width: 50%;
+  height: 6%;
+  margin: 10% 10%;
+  padding-top: 0rem;
+}

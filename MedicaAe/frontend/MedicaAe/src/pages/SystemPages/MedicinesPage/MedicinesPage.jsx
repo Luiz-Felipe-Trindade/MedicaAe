@@ -6,46 +6,14 @@ import { NavButton } from "../../../components/Buttons/NavButton/NavButton";
 import styles from "./MedicinesPage.module.css";
 
 export const MedicinesPage = () => {
-  const card = [
+  const medicines = [
     {
       id: 1,
-      remedy: "Nimesulida 100mg",
-      dosage: 2,
-      patient: "João Carlos Silva",
-      action: "Administrado/Agendado",
-      time: "17:30",
-    },
-    {
-      id: 4,
-      remedy: "Nimesulida 100mg",
-      dosage: 2,
-      patient: "João Carlos Silva",
-      action: "Administrado/Agendado",
-      time: "17:30",
-    },
-    {
-      id: 5,
-      remedy: "Nimesulida 100mg",
-      dosage: 2,
-      patient: "João Carlos Silva",
-      action: "Administrado/Agendado",
-      time: "17:30",
-    },
-    {
-      id: 2,
-      remedy: "Nimesulida 100mg",
-      dosage: 2,
-      patient: "João Carlos Silva",
-      action: "Administrado/Agendado",
-      time: "17:30",
-    },
-    {
-      id: 3,
-      remedy: "Nimesulida 100mg",
-      dosage: 2,
-      patient: "João Carlos Silva",
-      action: "Administrado/Agendado",
-      time: "17:30",
+      name: "Nimesulida",
+      dosage: "100",
+      indication: "...",
+      generic: true,
+      description: "...",
     },
   ];
   return (
@@ -54,35 +22,10 @@ export const MedicinesPage = () => {
       <div className={styles.left}>
         <div className={styles.box}>
           <Filter />
-          <label>Medicamentos administrados</label>
+          <label>Medicamentos cadastrados</label>
           <div className={styles.iten_box}>
-            {card.map((i) => (
-              <Cards
-                key={i.id}
-                remedy={i.remedy}
-                dosage={i.dosage}
-                patient={i.patient}
-                action={i.action}
-                time={i.time}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className={styles.right}>
-        <div className={styles.box}>
-          <Filter />
-          <label>Medicamentos administrados</label>
-          <div className={styles.iten_box}>
-            {card.map((i) => (
-              <Cards
-                key={i.id}
-                remedy={i.remedy}
-                dosage={i.dosage}
-                patient={i.patient}
-                action={i.action}
-                time={i.time}
-              />
+            {medicines.map((i) => (
+              <Cards key={i.id} medicies={i} />
             ))}
           </div>
         </div>
