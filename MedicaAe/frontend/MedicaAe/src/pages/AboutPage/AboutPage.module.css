@@ -2,7 +2,6 @@
   height: 100%;
   width: 100%;
   background-color: #a1d683;
-  zoom: 80%;
   
 
   display: flex;
@@ -37,8 +36,7 @@ p {
   font-size: larger;
   justify-content: center;
   text-align: center;
-  margin-left: 1rem;
-  margin-top: 1rem;
+  margin-left: 2.3rem;
 }
 .fp {
   margin: 6.3rem;
@@ -51,15 +49,12 @@ p {
 
 .icons {
   margin-left: 2%;
-  background-color:#a1d683;
-  margin-top: -4rem;
-  position: absolute;
-  z-index: 1;
+  margin-top: -0.5rem;
 }
 
 .medicaezinho {
   background-image: url(../../assets/medicaezinho.png);
   background-size: 15rem;            
   background-repeat: no-repeat;
-  background-position: 98rem 34rem;
+  background-position: 97rem 35rem;
 }
