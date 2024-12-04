@@ -7,7 +7,7 @@ import styles from "./PatientsPage.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const PacientePage = () => {
+export const PatientsPage = () => {
   const [patients, setPatients] = useState([]);
 
   const fetchPatients = async () => {
