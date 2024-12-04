@@ -1,0 +1,16 @@
+.input {
+  width: 24.4rem;
+  height: 3rem;
+
+  border: 1px solid #135359;
+  border-radius: 0.5rem;
+  margin-left: 0.3rem;
+}
+
+.container {
+  margin-top: 1rem;
+}
+
+label {
+  margin-bottom: 1rem;
+}

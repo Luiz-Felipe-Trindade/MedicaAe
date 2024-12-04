@@ -18,19 +18,6 @@ export const CardsPopUp = ({ onClose, tittle, medicies }) => {
         </div>
         <div className={styles.content_column}>
           <InputWithLabel label={"Dosagem"} defaultValue={medicies.dosage} />
-          <div className={styles.radios}>
-            <label>Genérico</label>
-            <div className={styles.generic}>
-              <div className={styles.input}>
-                <input type="radio" name="generic" id="yes" />
-                <label htmlFor="yes">Sim</label>
-              </div>
-              <div className={styles.input}>
-                <input type="radio" name="generic" id="no" />
-                <label htmlFor="no">Não</label>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className={styles.content_column}>

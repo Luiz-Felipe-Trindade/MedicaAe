@@ -26,9 +26,6 @@ export const Cards = ({ medicies }) => {
         <p className={styles.text}>Nome: {medicies.name}</p>
         <p className={styles.text}>Dosagem: {medicies.dosage}mg</p>
         <p className={styles.text}>Indicação: {medicies.indication}</p>
-        <p className={styles.text}>
-          Genérico: {medicies.generic ? "Sim" : "Não"}
-        </p>
       </div>
       <p className={styles.text}>Clique para ver a descrição</p>
       <div className={styles.icon}>

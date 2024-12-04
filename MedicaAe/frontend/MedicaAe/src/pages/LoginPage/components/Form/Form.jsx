@@ -3,6 +3,7 @@ import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
 import styles from "./Form.module.css";
 import { useAuth } from "../../../../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import ErrorPopup from "../../../../components/PopUp/ErrorPopUp";
 import axios from "axios"; // Adicionar axios para fazer a requisição
 
 export const Form = () => {
@@ -10,8 +11,8 @@ export const Form = () => {
   const [password, setPassword] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [error, setError] = useState(null);
 
+  const [erroPopup, setErroPopup] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,11 +25,13 @@ export const Form = () => {
 
       if (response.data.token) {
         // Login bem-sucedido
-        await login(email, password); 
+        await login(email, password);
         navigate("/"); // Navegar após o login
       }
     } catch (error) {
-      setError("Falha no login: " + error.response?.data?.message || error.message);
+      setErroPopup(
+        "Falha no login: " + error.response?.data?.message || error.message
+      );
     }
   };
 
@@ -57,8 +60,15 @@ export const Form = () => {
             setPassword(e.target.value);
           }}
         />
-        <button className={styles.base_button}>Entrar</button>
-        {error && <p className={styles.error_message}>{error}</p>} {/* Exibe erro se houver */} 
+        <button
+          type="submit"
+          onSubmit={handleSubmit}
+          className={styles.base_button}
+        >
+          Entrar
+        </button>
+
+        <ErrorPopup message={erroPopup} onClose={() => setErroPopup("")} />
       </form>
     </div>
   );

@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.top {
+  display: flex;
+  margin-bottom: 5rem;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.left {
+  width: 73%;
+}
+.right {
+  width: 45%;
+  height: 50%;
+}
+input[type="number"] {
+  width: 60%;
+  border-color: #135359;
+}
+.right textarea {
+  min-width: 9rem;
+  min-height: 15rem;
+}

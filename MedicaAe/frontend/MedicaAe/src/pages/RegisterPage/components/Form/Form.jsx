@@ -1,125 +1,162 @@
-import { useState } from "react";
-import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
-import axios from 'axios';
+import React, { useState } from "react";
+import InputNome from "../Inputs/InputNome";
+import InputCpf from "../Inputs/InputCpf";
+import InputSenha from "../Inputs/InputSenha";
+import InputConfirmacaoSenha from "../Inputs/InputConfirmacaoSenha";
+import InputEmail from "../Inputs/InputEmail";
+import InputConfirmacaoEmail from "../Inputs/InputConfirmacaoEmail";
 import styles from "./Form.module.css";
+import ErrorPopup from "../../../../components/PopUp/ErrorPopUp";
+import { useNavigate } from "react-router-dom";
+
+const validarSenha = (senha) => {
+  const regex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/;
+  return regex.test(senha);
+};
+
+const validarEmails = (email, confirmacaoEmail) => {
+  return email === confirmacaoEmail;
+};
+
+const validarCpf = (cpf) => {
+  const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+  return regex.test(cpf);
+};
 
 export const Form = () => {
-  const [displayName, setDisplayName] = useState("");
+  const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmacaoSenha, setConfirmacaoSenha] = useState("");
   const [email, setEmail] = useState("");
-  const [confirmEmail, setConfirmEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirmacaoEmail, setConfirmacaoEmail] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const [erros, setErros] = useState({
+    nome: "",
+    cpf: "",
+    senha: "",
+    confirmacaoSenha: "",
+    email: "",
+    confirmacaoEmail: "",
+  });
 
-    // Validação: checar se email e confirmação de email correspondem
-    if (email !== confirmEmail) {
-      alert('Os emails não correspondem!');
-      return;
+  const [erroPopup, setErroPopup] = useState("");
+
+  const handleNomeChange = (event) => setNome(event.target.value);
+  const handleCpfChange = (event) => setCpf(event.target.value);
+  const handleSenhaChange = (event) => setSenha(event.target.value);
+  const handleConfirmacaoSenhaChange = (event) =>
+    setConfirmacaoSenha(event.target.value);
+  const handleEmailChange = (event) => setEmail(event.target.value);
+  const handleConfirmacaoEmailChange = (event) =>
+    setConfirmacaoEmail(event.target.value);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setErroPopup("");
+
+    let valid = true;
+
+    let newErros = { ...erros };
+
+    if (!nome) {
+      newErros.nome = "Nome é obrigatório.";
+      setErroPopup("Nome é obrigatório.");
+      valid = false;
+    } else {
+      newErros.nome = "";
     }
 
-    // Validação: checar se senha e confirmação de senha correspondem
-    if (password !== confirmPassword) {
-      alert('As senhas não correspondem!');
-      return;
+    if (!validarCpf(cpf)) {
+      newErros.cpf = "CPF inválido.";
+      setErroPopup("CPF inválido.");
+      valid = false;
+    } else {
+      newErros.cpf = "";
     }
 
-    try {
-      // Enviar dados de registro para o back-end
-      const response = await axios.post('http://localhost:3000/auth/register', {
-        name: displayName,
-        cpf,
-        email,
-        password
-      });
-
-      alert('Registro bem-sucedido!');
-    } catch (error) {
-      console.error('Erro ao registrar:', error);
-      alert(`Falha no registro: ${error.response.data.message || error.response.data.error}`);
+    if (!validarSenha(senha)) {
+      newErros.senha =
+        "A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.";
+      setErroPopup(
+        "A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos."
+      );
+      valid = false;
+    } else {
+      newErros.senha = "";
     }
+
+    if (senha !== confirmacaoSenha) {
+      newErros.confirmacaoSenha = "As senhas não coincidem.";
+      setErroPopup("As senhas não coincidem.");
+      valid = false;
+    } else {
+      newErros.confirmacaoSenha = "";
+    }
+
+    if (!validarEmails(email, confirmacaoEmail)) {
+      newErros.confirmacaoEmail = "Os emails não coincidem.";
+      setErroPopup("Os emails não coincidem.");
+      valid = false;
+    } else {
+      newErros.confirmacaoEmail = "";
+    }
+
+    if (!email) {
+      newErros.email = "Email é obrigatório.";
+      setErroPopup("Email é obrigatório.");
+      valid = false;
+    } else {
+      newErros.email = "";
+    }
+
+    setErros(newErros);
+
+    if (valid) {
+      console.log("Formulário enviado com sucesso!");
+      alert("Formulário enviado com sucesso!");
+    }
+    navigate("/login");
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className={styles.inputs}>
-          <div className={styles.small_input}>
-            <InputWithLabel
-              label="Nome Completo"
-              placeholder={"Jorge Vagner"}
-              type="text"
-              name="displayName"
-              required
-              value={displayName}
-              onChange={(e) => {
-                setDisplayName(e.target.value);
-              }}
-            />
-            <InputWithLabel
-              label="CPF"
-              type="text"
-              name="cpf"
-              required
-              placeholder="000.000.000-00"
-              value={cpf}
-              onChange={(e) => {
-                setCpf(e.target.value);
-              }}
-            />
-          </div>
-          <div className={styles.small_input}>
-            <InputWithLabel
-              label="Senha"
-              type="password"
-              name="password"
-              required
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <InputWithLabel
-              label="Confirmação de senha"
-              type="password"
-              name="confirmPassword"
-              required
-              placeholder="••••••••"
-              value={confirmPassword}
-              onChange={(e) => {
-                setConfirmPassword(e.target.value);
-              }}
-            />
-          </div>
-        </div>
-        <InputWithLabel
-          label="Email"
-          type="email"
-          name="email"
-          required
-          placeholder="exemplo@medicae.com"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
+    <form onSubmit={handleSubmit} className={styles.inputs}>
+      <div className={styles.small_input}>
+        <InputNome value={nome} onChange={handleNomeChange} erro={erros.nome} />
+        <InputCpf value={cpf} onChange={handleCpfChange} erro={erros.cpf} />
+      </div>
+      <div className={styles.small_input}>
+        <InputSenha
+          value={senha}
+          onChange={handleSenhaChange}
+          erro={erros.senha}
         />
-        <InputWithLabel
-          label="Confirmação de email"
-          name="confirmEmail"
-          required
-          placeholder="exemplo@medicae.com"
-          value={confirmEmail}
-          onChange={(e) => {
-            setConfirmEmail(e.target.value);
-          }}
+        <InputConfirmacaoSenha
+          value={confirmacaoSenha}
+          onChange={handleConfirmacaoSenhaChange}
+          erro={erros.confirmacaoSenha}
         />
-        <button type="submit" className={styles.base_button}>
-          Cadastrar
-        </button>
-      </form>
-    </div>
+      </div>
+      <InputEmail
+        value={email}
+        onChange={handleEmailChange}
+        erro={erros.email}
+      />
+      <InputConfirmacaoEmail
+        value={confirmacaoEmail}
+        onChange={handleConfirmacaoEmailChange}
+        erro={erros.confirmacaoEmail}
+      />
+
+      <button type="submit" className={styles.base_button}>
+        Cadastrar
+      </button>
+
+      <ErrorPopup message={erroPopup} onClose={() => setErroPopup("")} />
+    </form>
   );
 };

@@ -3,6 +3,7 @@ import { NavBar } from "../../../../components/NavBar/NavBar";
 
 import { InputWithLabel } from "../../../../components/Inputs/InputWithLabel";
 import { Textarea } from "../../../../components/Inputs/Textarea";
+import { InputCpfMask } from "../../../../components/Inputs/InputCpfMask";
 
 export const AddPatientsPage = () => {
   return (
@@ -16,7 +17,7 @@ export const AddPatientsPage = () => {
               <InputWithLabel label={"Sobrenome"} placeholder={"Smitherton"} />
             </div>
             <div className={styles.input_right}>
-              <InputWithLabel label={"CPF"} placeholder={"000.000.000-00"} />
+              <InputCpfMask />
               <InputWithLabel
                 label={"Contato de Emergência"}
                 placeholder={"(00) 9 0000-0000"}

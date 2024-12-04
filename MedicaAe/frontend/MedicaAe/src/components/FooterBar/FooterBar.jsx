@@ -24,9 +24,9 @@ export const FooterBar = () => {
                 setEmail(e.target.value);
               }}
             />
-            <button className={styles.button}>
+            {/* <button className={styles.button}>
               <p>⟶</p>
-            </button>
+            </button> */}
           </form>
         </div>
       </div>
