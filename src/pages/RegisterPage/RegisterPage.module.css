@@ -1,0 +1,35 @@
+.container {
+  background-image: url(/src/assets/image.png);
+  background-position: 0rem 25rem;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.register_box {
+  width: 30rem;
+
+  padding: 6rem 20rem;
+}
+.subcontainer {
+  background-image: url(../../assets/image3.png);
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-position: 70rem 15rem;
+}
+.already_link {
+  color: #135359;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0rem 11rem;
+}
+.already_link:hover {
+  text-decoration: underline;
+}
+.footer {
+  margin: 0;
+  padding: 0;
+}
+.icons {
+  margin-top: 5.5rem;
+  margin-left: 2%;
+}

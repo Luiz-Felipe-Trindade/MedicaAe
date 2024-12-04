@@ -1,0 +1,53 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.title {
+  font-size: 10rem;
+  color: #DCDCDC;
+  margin-bottom: 1.25rem;
+  line-height: 0.6;
+}
+
+.text {
+  font-size: 1rem;
+  color: #DCDCDC;
+  margin-top: 0.625rem;
+}
+
+
+.container {
+  background-image: url(/src/assets/folha.png);
+  background-position: 21rem 8rem;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.313rem;
+  background-color: #95A78A;;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.625rem;
+  text-decoration: none;
+}

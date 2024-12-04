@@ -1,0 +1,31 @@
+.receive_atts {
+  padding: 0.7rem 0.5rem;
+  width: 15rem;
+
+  border: 1px #135359 solid;
+  border-radius: 0.5rem;
+}
+
+.button p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.button {
+  padding: 0.1rem 0.8rem;
+  margin: 0;
+  border-radius: 0.5rem;
+  border: solid #135359 1px;
+  background-color: #135359;
+
+  cursor: pointer;
+}
+.form {
+  padding: 0rem 15rem;
+}
+
+.footer_bar {
+  display: flex;
+}

@@ -1,0 +1,36 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.icons {
+  margin-right: 1rem;
+}
+.button_links {
+  display: flex;
+  margin: 0rem 0rem;
+  flex-direction: column;
+}
+.link {
+  text-decoration: none;
+  color: #fffbf7;
+  margin: 0.3rem 0rem;
+}
+
+.main_box {
+  font-size: 1.4rem;
+  min-width: 250px;
+  max-width: 250px;
+  height: 100%;
+  background-color: #a1d683;
+}
+.logo {
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 10%;
+}
+.main_column {
+  margin: 0rem 1%;
+  padding: 1rem;
+}
