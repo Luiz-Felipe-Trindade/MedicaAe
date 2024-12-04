@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.config_tittle {
+  font-size: 2.5rem;
+}
+.subcontainer {
+  padding: 1rem 9rem;
+  width: 30%;
+}
+.input {
+  background-color: #fff;
+  border: 1px solid #a1d683;
+  padding: 0.75rem;
+
+  font-size: 1rem;
+  color: #135359;
+
+  border-radius: 0.5rem;
+}
+.input label {
+  font-size: 1.5rem;
+}
+.add_button {
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 3rem;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+.add_button p {
+  margin: 3px;
+  font-size: 1rem;
+}
+.add_button:hover {
+  color: #4e4e4e;
+}
+.add_button:active {
+  color: #212121;
+}
+.save_btn {
+  color: #fffbf7;
+  background-color: #135359;
+  border-radius: 0.5em;
+  border-color: transparent;
+
+  text-decoration: none;
+  font-size: 1rem;
+
+  padding: 0.5rem;
+  margin: 1rem 0rem;
+
+  cursor: pointer;
+}
+.save_btn:hover {
+  box-shadow: 0.1rem 0.1rem 1rem #09262983;
+}
+.save_btn:active {
+  background-color: #0e4045;
+}

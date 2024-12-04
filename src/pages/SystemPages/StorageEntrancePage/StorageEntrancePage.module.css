@@ -1,0 +1,66 @@
+.container {  
+    height: 100%;  
+    width: 100%;  
+    display: flex;  
+    flex-direction: row;  
+}  
+
+.title {  
+    display: flex;
+    padding: 50px;  
+}  
+
+.subcontainer {  
+    display: flex;  
+    flex-direction: column;  
+    padding: 1rem;
+    margin-left: 60px;
+    width: 60%;  /* Largura total do input */    
+}  
+
+.inputsContainer {  
+    display: flex;  
+    justify-content: space-between;
+    margin-top: 20px; 
+}  
+
+.rightInputContainer {  
+    display: flex;  
+    flex-direction: column; 
+    width: 40%;
+}  
+
+.form {  
+    width: 40%;   /* Largura para o input de medicamento */  
+}
+
+.button {
+    color: #fffbf7;
+    background-color: #135359;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    width: 10rem;
+    height: 3rem;
+    margin-top: 19rem;
+    margin-left: 30rem;
+    display: flex;
+  }
+  .button:hover {
+    box-shadow: 0.1rem 0.1rem 1rem #09262983;
+  }
+
+  .medinput[list="medicamentos"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.5em;
+    border: 1px solid #a1d683;
+    margin-top: 0.5rem;
+}
+
+
