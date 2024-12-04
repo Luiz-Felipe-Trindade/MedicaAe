@@ -1,0 +1,35 @@
+.container {
+  background-image: url(/src/assets/image.png);
+  background-position: 0rem 17rem;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.subcontainer {
+  background-image: url(../../assets/image2.png);
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-position: 57rem -7.77rem;
+}
+.login {
+  width: 18.8rem;
+
+  padding: 10rem 25rem;
+}
+
+.create_account {
+  color: #135359;
+  text-decoration: none;
+  padding: 0.1rem 2.5rem;
+}
+
+.create_account:hover {
+  text-decoration: underline;
+}
+.footer {
+  margin: 1.86rem 0rem;
+}
+.icons {
+  margin-top: 5.5rem;
+  margin-left: 2%;
+}

@@ -1,0 +1,16 @@
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.content_column {
+  width: 100%;
+  margin: 2rem;
+}
+.content_column input {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  border-color: #135359;
+}

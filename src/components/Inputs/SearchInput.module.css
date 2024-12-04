@@ -1,0 +1,32 @@
+.search_input {
+  display: flex;
+  justify-content: left;
+  height: 3.5rem;
+  margin: 0rem;
+  width: 20%;
+  border: 1px solid #135359;
+  border-radius: 0.6rem;
+}
+.input {
+  width: 80%;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  font-size: 1.2rem;
+  color: #135359;
+}
+.btn {
+  height: 100%;
+  width: 20%;
+  border: 1px solid #135359;
+  background-color: #135359;
+  border-radius: 0.4rem;
+}
+.icon {
+  height: 100%;
+  color: #fff;
+  border-radius: 0.6rem;
+}
+.input:focus {
+  outline: none;
+  border: none;
+}
