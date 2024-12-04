@@ -24,3 +24,19 @@
   margin-top: 0.5rem;
   margin-left: 1rem;
 }
+  justify-content: space-between; /* Ajusta para distribuir os itens de forma equilibrada */
+  gap: 1.5rem; /* Ajusta o espaçamento entre as colunas */
+  flex-wrap: wrap; /* Permite que as colunas se ajustem em telas pequenas */
+}
+
+.content_column {
+  width: 48%; /* Garante que as colunas fiquem lado a lado */
+  margin-top: 2rem;
+  box-sizing: border-box; /* Garante que a largura não seja afetada pelo padding ou margin */
+}
+
+@media (max-width: 768px) {
+  .content_column {
+    width: 100%; /* As colunas ocupam 100% da largura em telas menores */
+  }
+}

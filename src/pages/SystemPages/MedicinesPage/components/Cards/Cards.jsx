@@ -14,7 +14,10 @@ export const Cards = ({ medicies }) => {
   };
 
   return (
-    <div className={styles.container} onClick={handleOpenPopUp}>
+    <div
+      className={`${styles.container} ${isPopUpOpen ? styles.noHover : ""}`} // Desativa o hover quando o pop-up está aberto
+      onClick={handleOpenPopUp}
+    >
       {isPopUpOpen && (
         <CardsPopUp
           onClose={handleClosePopUp}
@@ -22,9 +25,10 @@ export const Cards = ({ medicies }) => {
           medicies={medicies}
         />
       )}
+
       <div className={styles.infos}>
         <p className={styles.text}>Nome: {medicies.name}</p>
-        <p className={styles.text}>Dosagem: {medicies.dosage}mg</p>
+        <p className={styles.text}>Dosagem: {medicies.dosage}</p>
         <p className={styles.text}>Indicação: {medicies.indication}</p>
       </div>
       <p className={styles.text}>Clique para ver a descrição</p>
