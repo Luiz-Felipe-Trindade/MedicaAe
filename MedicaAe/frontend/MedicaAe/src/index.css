@@ -14,3 +14,17 @@ body {
   height: 100%;
   width: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #efe7df;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #b6aea7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9c948f;
+}

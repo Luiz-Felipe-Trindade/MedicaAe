@@ -6,17 +6,16 @@
   width: 100%;
 }
 
-
 .question {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
 
-  height: 100%;
-  width: 90%;
-  margin: 0;
-  padding: 30% 0%;
+  height: 90%;
+  width: 85%;
+  margin: 3rem;
+  padding: 25% 0%;
 }
 
 .h1 {

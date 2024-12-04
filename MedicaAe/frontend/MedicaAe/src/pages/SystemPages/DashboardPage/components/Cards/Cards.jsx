@@ -16,7 +16,10 @@ export const Cards = ({ id, remedy, dosage, patient, action, time }) => {
   return (
     <div className={styles.container} onClick={handleOpenPopUp}>
       {isPopUpOpen && (
-        <CardsPopUp onClose={handleClosePopUp} tittle={"Editar Tratamento"} />
+        <CardsPopUp
+          onClose={handleClosePopUp}
+          tittle={"Visualizar Tratamento"}
+        />
       )}
       <div className={styles.infos}>
         <p className={styles.text}>{remedy}</p>

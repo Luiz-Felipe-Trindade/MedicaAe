@@ -12,7 +12,6 @@ export const MedicinesPage = () => {
       name: "Nimesulida",
       dosage: "100",
       indication: "...",
-      generic: true,
       description: "...",
     },
   ];

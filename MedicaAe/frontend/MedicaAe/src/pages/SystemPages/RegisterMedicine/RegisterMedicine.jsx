@@ -25,21 +25,6 @@ export const RegisterMedicine = () => {
                 />
               </div>
             </form>
-            <div className={styles.radios}>
-              <div className={styles.type} id="type">
-                <label htmlFor="type">Genérico ou Oririnal?</label>
-                <div>
-                  <div>
-                    <input type="radio" name="type" id="generico" />
-                    <label htmlFor="generico">Genérico</label>
-                  </div>
-                  <div>
-                    <input type="radio" name="type" id="original" />
-                    <label htmlFor="original">Original</label>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div className={styles.textarea}>
             <Textarea

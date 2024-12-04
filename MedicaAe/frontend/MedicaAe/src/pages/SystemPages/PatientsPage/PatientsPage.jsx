@@ -14,9 +14,8 @@ export const PatientsPage = () => {
           <div className={styles.cards_list}></div>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.button}>Editar Paciente</button>
           <NavLink className={styles.button_add} to={"/patients/add"}>
-            <p>Cadastrar Paciente</p>
+            <label>Cadastrar Paciente</label>
           </NavLink>
         </div>
       </div>

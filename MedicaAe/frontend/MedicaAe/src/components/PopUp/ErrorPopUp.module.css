@@ -1,0 +1,38 @@
+.popupContainer {
+  position: absolute; /* Faz o popup aparecer acima do conteúdo */
+  top: 20%; /* Posiciona abaixo do formulário */
+  left: 10%;
+  right: 0;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.popup {
+  background-color: #f443368d; /* Cor de fundo do erro (vermelho) */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Tamanho fixo do popup */
+  text-align: center;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.closeButton {
+  background-color: #fff;
+  color: #f44336ae;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.closeButton:hover {
+  background-color: #f0f0f0;
+}

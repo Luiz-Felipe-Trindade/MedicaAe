@@ -3,7 +3,7 @@ import { useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { CardsPopUp } from "../CardsPopUp/CardsPopUp";
 
-export const Cards = ({ id, remedy, dosage, patient, action, time }) => {
+export const Cards = ({ id, data }) => {
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
   const handleOpenPopUp = () => {
@@ -18,27 +18,49 @@ export const Cards = ({ id, remedy, dosage, patient, action, time }) => {
       {isPopUpOpen && (
         <CardsPopUp onClose={handleClosePopUp} tittle={"Editar Tratamento"} />
       )}
-      <div className={styles.infos}>
-        <p className={styles.text}>
-          Nome:
-          <br />
-          {patient}
-        </p>
-      </div>
-      <div className={styles.status}>
-        <p className={styles.text}>
-          Status: <br />
-          {action}
-        </p>
-        <div className={styles.time}>
+
+      <div className={styles.columns}>
+        <div className={styles.infos}>
           <p className={styles.text}>
-            Horário: <br />
-            {time}
+            Paciente:
+            <br />
+            {data.patient}
+          </p>
+          <br />
+          <p className={styles.text}>
+            Medicamento: <br />
+            {data.remedy}
+          </p>
+        </div>
+        <div className={styles.infos}>
+          <p className={styles.text}>
+            Dosagem(mg):
+            <br />
+            {data.dosage}
+          </p>
+          <br />
+          <p className={styles.text}>
+            Status do Tratamento: <br />
+            {data.status}
+          </p>
+        </div>
+        <div className={styles.infos}>
+          <p className={styles.text}>
+            Inicio do tratamento:
+            <br />
+            {data.beginTrat}
+          </p>
+          <br />
+          <p className={styles.text}>
+            Fim do tratamento: <br />
+            {data.endTrat}
           </p>
         </div>
       </div>
+
       <div className={styles.icon}>
-        <IoEye size={25} />
+        <p className={styles.text}>Clique para editar</p>
+        {/* <IoEye size={25} /> */}
       </div>
     </div>
   );

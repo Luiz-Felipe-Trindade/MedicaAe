@@ -2,6 +2,8 @@
   padding: 0.7rem 0.5rem;
   width: 15rem;
 
+  margin-left: 3.5rem;
+  margin-top: -1rem;
   border: 1px #135359 solid;
   border-radius: 0.5rem;
 }
@@ -23,9 +25,10 @@
   cursor: pointer;
 }
 .form {
-  padding: 0rem 15rem;
+  margin: 0rem 15rem;
 }
 
 .footer_bar {
   display: flex;
+  height: 20rem;
 }

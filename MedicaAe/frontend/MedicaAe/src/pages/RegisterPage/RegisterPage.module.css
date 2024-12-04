@@ -8,7 +8,7 @@
 .register_box {
   width: 30rem;
 
-  padding: 6rem 20rem;
+  margin: 3rem 20rem;
 }
 .subcontainer {
   background-image: url(../../assets/image3.png);
@@ -26,10 +26,10 @@
   text-decoration: underline;
 }
 .footer {
-  margin: 0;
+  margin-top: -3rem;
   padding: 0;
 }
 .icons {
-  margin-top: 5.5rem;
+  margin-top: -1rem;
   margin-left: 2%;
 }

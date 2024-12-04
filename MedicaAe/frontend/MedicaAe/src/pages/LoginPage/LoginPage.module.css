@@ -14,7 +14,7 @@
 .login {
   width: 18.8rem;
 
-  padding: 10rem 25rem;
+  margin: 6rem 25rem;
 }
 
 .create_account {
@@ -30,6 +30,7 @@
   margin: 1.86rem 0rem;
 }
 .icons {
-  margin-top: 5.5rem;
+  margin-top: 0rem;
   margin-left: 2%;
+  height: 20%;
 }

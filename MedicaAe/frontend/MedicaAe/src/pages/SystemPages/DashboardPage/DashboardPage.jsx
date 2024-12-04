@@ -1,10 +1,11 @@
 import { Cards } from "./components/Cards/Cards";
 import Clock from "../../../components/Clock/Clock";
-import MyCalendar from "../../../components/MyCalendar/MyCalendar";
+import { MyCalendar } from "../../../components/MyCalendar/MyCalendar";
 import { NavBar } from "../../../components/NavBar/NavBar";
 import { Filter } from "./components/Filter/Filter";
 
 import styles from "./DashboardPage.module.css";
+import { useState } from "react";
 export const DashboardPage = () => {
   const card = [
     {
@@ -49,13 +50,19 @@ export const DashboardPage = () => {
     },
   ];
 
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const handleSelectedDate = (date) => {
+    setSelectedDate(date);
+  };
+
   return (
     <div className={styles.container}>
       <NavBar />
       <div className={styles.page}>
         <div className={styles.subcontainer_top}>
           <div className={styles.calendar}>
-            <MyCalendar />
+            <MyCalendar onSelectedDate={handleSelectedDate} />
           </div>
           <div className={styles.clock}>
             <Clock />
