@@ -10,6 +10,7 @@
   background-size: 30rem;
   background-repeat: no-repeat;
   background-position: 57rem -7.77rem;
+  height: 80%;
 }
 .login {
   width: 18.8rem;
@@ -26,11 +27,9 @@
 .create_account:hover {
   text-decoration: underline;
 }
-.footer {
-  margin: 1.86rem 0rem;
-}
+
 .icons {
-  margin-top: 0rem;
   margin-left: 2%;
-  height: 20%;
+  margin-top: 24rem;
+  height: 10%;
 }

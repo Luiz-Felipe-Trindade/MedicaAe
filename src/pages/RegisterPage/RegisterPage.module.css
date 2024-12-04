@@ -7,7 +7,6 @@
 }
 .register_box {
   width: 30rem;
-
   margin: 3rem 20rem;
 }
 .subcontainer {
@@ -15,6 +14,7 @@
   background-size: 30rem;
   background-repeat: no-repeat;
   background-position: 70rem 15rem;
+  height: 80%;
 }
 .already_link {
   color: #135359;
@@ -25,11 +25,8 @@
 .already_link:hover {
   text-decoration: underline;
 }
-.footer {
-  margin-top: -3rem;
-  padding: 0;
-}
+
 .icons {
-  margin-top: -1rem;
+  margin-top: 1rem;
   margin-left: 2%;
 }

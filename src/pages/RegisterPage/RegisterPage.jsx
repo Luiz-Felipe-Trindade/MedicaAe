@@ -20,9 +20,6 @@ export const RegisterPage = () => {
             Já tem uma conta?
           </NavLink>
         </div>
-        <div className={styles.footer}>
-          <FooterBar />
-        </div>
       </div>
       <div className={styles.icons}>
         <IconsBar />

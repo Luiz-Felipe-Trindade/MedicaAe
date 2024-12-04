@@ -20,9 +20,7 @@ export const LoginPage = () => {
             Não tem uma conta? Crie agora!
           </NavLink>
         </div>
-        <div className={styles.footer}>
-          <FooterBar />
-        </div>
+
         <div className={styles.bar}></div>
         <div className={styles.icons}>
           <IconsBar />
