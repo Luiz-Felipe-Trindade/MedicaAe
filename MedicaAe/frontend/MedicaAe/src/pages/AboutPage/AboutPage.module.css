@@ -37,8 +37,7 @@ p {
   font-size: larger;
   justify-content: center;
   text-align: center;
-  margin-left: 1rem;
-  margin-top: 1rem;
+  margin-left: 2.3rem;
 }
 .fp {
   margin: 6.3rem;
@@ -51,10 +50,8 @@ p {
 
 .icons {
   margin-left: 2%;
-  background-color: #a1d683;
-  margin-top: -1rem;
-  position: absolute;
-  z-index: 1;
+  margin-top: -0.5rem;
+
 }
 
 .medicaezinho {
@@ -64,4 +61,5 @@ p {
   background-position: 98rem 34rem;
   height: 100%;
   width: 100%;
+
 }
