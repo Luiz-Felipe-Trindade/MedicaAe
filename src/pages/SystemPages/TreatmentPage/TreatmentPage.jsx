@@ -13,11 +13,7 @@ export const TreatmentPage = () => {
   };
   const card = [
     {
-      id: 1,
-      remedy: "Nimesulida",
-      dosage: 100,
-      patient: "João Carlos Silva",
-      status: "Em andamento",
+      
     },
   ];
   return (

@@ -20,6 +20,9 @@ export const MedicinesPage = () => {
         indication: med.descricao,
         description: med.descricao,
       }));
+
+      medicinesData.sort((a, b) => a.id - b.id);
+
       setMedicines(medicinesData);
     } catch (error) {
       console.error("Erro ao buscar medicamentos:", error);

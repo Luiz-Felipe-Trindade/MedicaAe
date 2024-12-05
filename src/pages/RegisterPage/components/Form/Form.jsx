@@ -8,6 +8,7 @@ import InputConfirmacaoEmail from "../Inputs/InputConfirmacaoEmail";
 import styles from "./Form.module.css";
 import ErrorPopup from "../../../../components/PopUp/ErrorPopUp";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Importando Axios para enviar a requisição
 
 const validarSenha = (senha) => {
   const regex =
@@ -54,7 +55,7 @@ export const Form = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     setErroPopup("");
@@ -116,11 +117,27 @@ export const Form = () => {
 
     setErros(newErros);
 
+    // Se todos os campos forem válidos, envia os dados para a API
     if (valid) {
-      console.log("Formulário enviado com sucesso!");
-      alert("Formulário enviado com sucesso!");
+      try {
+        // Enviar dados do formulário para a API (POST para /register)
+        const response = await axios.post("http://localhost:3000/auth/register", {
+          name: nome,
+          cpf,
+          password: senha,
+          email,
+        });
+
+        if (response.status === 201) {
+          console.log("Cadastro realizado com sucesso!");
+          alert("Cadastro realizado com sucesso!");
+          navigate("/login");
+        }
+      } catch (error) {
+        console.error("Erro ao cadastrar:", error);
+        setErroPopup("Erro ao cadastrar. Tente novamente.");
+      }
     }
-    navigate("/login");
   };
 
   return (

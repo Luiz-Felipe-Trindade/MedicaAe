@@ -23,6 +23,8 @@ export const Form = () => {
         password,
       });
 
+      
+
       if (response.data.token) {
         // Login bem-sucedido
         await login(email, password);

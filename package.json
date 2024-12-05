@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.7.7",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
     "cpf-validator": "^1.0.1",
     "dayjs": "^1.11.13",
     "imask": "^7.6.1",

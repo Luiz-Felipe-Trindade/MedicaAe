@@ -1,10 +1,9 @@
 // Styles
 import "./App.css";
 
-// Context API's
+//  API's
 import { AuthProvider } from "./context/AuthProvider";
 
-// Pages
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { HomePage } from "./pages/HomePage/HomePage";

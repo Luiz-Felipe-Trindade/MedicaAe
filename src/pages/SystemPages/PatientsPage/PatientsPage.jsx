@@ -3,6 +3,7 @@ import { Filter } from "./components/Filter/Filter";
 import { CardsPatitens } from "./components/CardsPatients/CardsPatients";
 import { NavButton } from "../../../components/Buttons/NavButton/NavButton";
 
+
 import styles from "./PatientsPage.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -10,9 +11,14 @@ import axios from "axios";
 export const PatientsPage = () => {
   const [patients, setPatients] = useState([]);
 
+  // Função que vai buscar os pacientes do servidor
   const fetchPatients = async () => {
+    const userId = localStorage.getItem("id_user");  // Ou pegar de outro lugar, se for o caso
+
+ 
+
     try {
-      const response = await axios.get("http://localhost:3000/paciente");
+      const response = await axios.get(`http://localhost:3000/paciente`);
       const pacData = response.data.map((pac) => ({
         id: pac.id_paciente,
         name: pac.nomepaciente,
@@ -28,6 +34,7 @@ export const PatientsPage = () => {
     }
   };
 
+  // Chamada da função fetchPatients quando o componente é montado
   useEffect(() => {
     fetchPatients();
   }, []);
@@ -52,7 +59,7 @@ export const PatientsPage = () => {
       </div>
       <div className={styles.rest}>
         <div className={styles.navbutton}>
-          <NavButton name={"Cadastrar Paciente"} to="/pacientes/add" />
+           <NavButton name={"Cadastrar Paciente"} to="/patients/add" />
         </div>
       </div>
     </div>
